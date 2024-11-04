@@ -1,0 +1,71 @@
+\documentclass{beamer}
+\title{Introduction to Mohammad Elayan}
+\date{\today}
+
+\begin{document}
+
+% Title Slide
+\frame{\titlepage}
+
+% Slide 1: Introduction
+\begin{frame}{Introduction}
+    \textbf{Name:} Mohammad Elayan \\
+    \textbf{Birthday:} December 6 \\
+    \textbf{Hometown:} Palestinian in Dubai \\
+    \textbf{Program:} Civil \& Environmental Engineering (PhD) \\  % Use \& here
+    \textbf{Expected Graduation:} Summer 2026
+\end{frame}
+
+% Slide 2: Favorite Animal
+\begin{frame}{Favorite Animal}
+    \begin{center}
+        \includegraphics[width=0.8\linewidth]{image/animal.png}
+        \\[0.5cm]
+        \textbf{Hello there!}
+    \end{center}
+\end{frame}
+
+% Slide 3: Favorite Plot (dynamically generated)
+\begin{frame}{Favorite Plot}
+<<fig.width=8, fig.height=5, echo=FALSE, message=FALSE>>=
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+
+# Import games data
+games <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-16/games.csv')
+
+# Convert months to numeric format
+games$month_num <- as.numeric(factor(games$month, levels = month.name))
+
+# Filter data for desired years
+games_y <- subset(games, year %in% (2016:2021))
+
+# Filter for specific games
+games_y_g <- subset(games_y, gamename %in% c("Counter-Strike: Global Offensive", "Stardew Valley",
+                                             "Tabletop Simulator", "Team Fortress 2"))
+
+# Define date variable
+games_y_g$date <- as.Date(paste(games_y_g$year, games_y_g$month_num, "01", sep = "-"), format = "%Y-%m-%d")
+
+# Create the plot
+ggplot(data = games_y_g,
+       aes(x = date, y = avg, group = gamename, color = gamename)) +
+  geom_line() +
+  scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
+  labs(title = "Average Players Over Time for Selected Games",
+       x = "Year",
+       y = "Average Players",
+       color = "Game Name") +
+  theme_minimal()
+@
+\end{frame}
+
+% Last slide with CV link
+\begin{frame}{My CV}
+    \begin{center}
+        \href{CV.pdf}{Link to My CV}
+    \end{center}
+\end{frame}
+
+\end{document}
