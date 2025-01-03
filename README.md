@@ -14,16 +14,6 @@ PhD student in Civil Engineering (Transportation) with a stats minor, because wh
 ![Julia](https://img.shields.io/badge/-Julia-9558B2?style=flat&logo=julia) 
 ![SAS](https://img.shields.io/badge/-SAS-004B87?style=flat&logo=sas)
 
-## 📊 GitHub Stats
-
-![mselayan's GitHub stats](https://github-readme-stats.vercel.app/api?username=mselayan&show_icons=true&theme=tokyonight)
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=mselayan&layout=compact&theme=tokyonight)
-
-## 🏆 GitHub Trophies
-
-![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=mselayan&theme=tokyonight)
-
 ## 📫 Connect with Me
 
 - LinkedIn: [Mohammad Elayan](https://www.linkedin.com/in/mohammad-elayan-69096662)
