@@ -1,12 +1,12 @@
-# Hi there, I'm mselayan! 👋
+# Hi there, I'm Mohammad Elayan!
 
 ![Profile Views](https://komarev.com/ghpvc/?username=mselayan&color=blue)
 
-## 🚀 About Me
+## About Me
 
 PhD student in Civil Engineering (Transportation) with a stats minor, because why not complicate things further? Researching big data in transport safety and AV behavior, after a casual decade of engineering transport systems in Dubai’s urban jungle. 
 
-## 🛠️ Languages and Tools
+## Languages and Tools
 
 ![Python](https://img.shields.io/badge/-Python-05122A?style=flat&logo=python) 
 ![GitHub](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)
@@ -14,12 +14,12 @@ PhD student in Civil Engineering (Transportation) with a stats minor, because wh
 ![Julia](https://img.shields.io/badge/-Julia-9558B2?style=flat&logo=julia) 
 ![SAS](https://img.shields.io/badge/-SAS-004B87?style=flat&logo=sas)
 
-## 📫 Connect with Me
+## Connect with Me
 
 - LinkedIn: [Mohammad Elayan](https://www.linkedin.com/in/mohammad-elayan-69096662)
 - Email: [melayan2@huskers.unl.edu](mailto:melayan2@huskers.unl.edu)
 
-## 🎨 My Interests
+## My Interests
 
 - Transportation Engineering Research
 - Photography
@@ -27,7 +27,7 @@ PhD student in Civil Engineering (Transportation) with a stats minor, because wh
 - Technology and Programming
 - Open Source Contributions
 - Sharing Knowledge
-- Football (the actual ball-shaped object played with the foot thing)
+- Football (I mean European)
 
 ---
 
