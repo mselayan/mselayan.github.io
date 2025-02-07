@@ -10,7 +10,7 @@ layout: default
 
 I serve as a **Graduate Teaching Assistant (GTA)** in the **Department of Civil & Environmental Engineering**, assisting with undergraduate transportation and civil engineering courses.
 
-### **Courses Taught**  
+### **Courses TA'ed**  
 
 #### **CIVE 202 - Civil Engineering Analysis II**  
 - A **project-based course** focused on developing **computational and programming skills** for civil engineers.  
