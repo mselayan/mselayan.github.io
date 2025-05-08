@@ -3,7 +3,7 @@ title: Professional Experience
 layout: default
 ---
 
-# Professional Experience
+# Experience and Qualifications
 
 ## University of Nebraska-Lincoln, Lincoln, NE, USA  
 **Graduate Research Assistant** *(January 2023 – Present)*  
