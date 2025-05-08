@@ -39,34 +39,34 @@ layout: default
 # Software Competencies  
 
 ### **Traffic Analysis & Planning**
-✅ VISSIM  
-✅ VISUM  
-✅ Synchro  
-✅ SIDRA  
-✅ HCS  
+- VISSIM  
+- VISUM  
+- Synchro  
+- SIDRA  
+- HCS  
 
 ### **GIS & Spatial Analysis**
-✅ ArcGIS  
-✅ QGIS  
-✅ GeoDa  
+- ArcGIS  
+- QGIS  
+- GeoDa  
 
 ### **Statistical & Data Science Tools**
-✅ Python  
-✅ R  
-✅ SPSS  
-✅ SAS  
-✅ Julia  
+- Python  
+- R  
+- SPSS  
+- SAS  
+
+### **Optimization Tools**
+- Julia  
 
 ### **Machine Learning & Modeling**
-✅ Scikit-learn  
-✅ TensorFlow   
+- Scikit-learn  
+- TensorFlow   
 
 ### **Other Tools**
-✅ Microsoft Office  
-✅ Adobe Photoshop & Lightroom  
-✅ Latex 
-✅ Quarto 
+- Latex 
+- Quarto
 
 ---
 
-📌 **[Back to Home](index.md)**    
+**[Back to Home](index.md)**    
