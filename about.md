@@ -14,8 +14,6 @@ My **academic background** includes:
 
 I am particularly interested in **automated vehicle behavior**, **big data analytics**, **machine learning** and **transportation modeling**.
 
-[View My Research](research.md)  
-
-[Read My Publications](publications.md)
-
+[View My Research](research.md)   
+[Read My Publications](publications.md)   
 [Go Back to Homepage](index.md)
