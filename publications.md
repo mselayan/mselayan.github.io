@@ -6,6 +6,8 @@ layout: default
 
 This page highlights my scholarly contributions, including peer-reviewed journal articles, conference presentations, and technical reports. My research spans topics such as automated vehicle behavior, multimodal traffic modeling and transportation safety, often leveraging large-scale data and machine learning.
 
+**[See My Google Scholar Profile](https://scholar.google.com/citations?user=4ypH5kAAAAAJ&hl=en)**
+
 ## Peer-Reviewed Journal Papers
 
 ### Published Papers
@@ -35,6 +37,5 @@ This page highlights my scholarly contributions, including peer-reviewed journal
 
 ---
 
-**[See My Full Google Scholar Profile](https://scholar.google.com/citations?user=4ypH5kAAAAAJ&hl=en)**
-
-**[Go Back to Homepage](index.md)**
+[See My Google Scholar Profile](https://scholar.google.com/citations?user=4ypH5kAAAAAJ&hl=en)   
+[Go Back to Homepage](index.md)
