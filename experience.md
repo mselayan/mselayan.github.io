@@ -12,6 +12,7 @@ layout: default
 **[See Research](research.md)**
 
 **[See Teaching](teaching.md)**
+
 ---
 
 ## TrafQuest, Dubai, United Arab Emirates  
