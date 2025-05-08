@@ -2,6 +2,7 @@
 title: About Me
 layout: default
 ---
+# About Me
 
 I am a **PhD Student** at the **University of Nebraska-Lincoln**, where I research **autonomous vehicle trajectory analysis** to improve car-following behavior and traffic interactions.
 
