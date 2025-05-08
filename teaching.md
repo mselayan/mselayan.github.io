@@ -5,6 +5,8 @@ layout: default
 
 # Teaching Experience
 
+This page outlines my teaching contributions at the undergraduate level in both the United States and Jordan. My roles have included providing instructional support, assisting with labs, and mentoring students in core civil and transportation engineering courses.
+
 ## University of Nebraska-Lincoln, Lincoln, NE, USA  
 **Graduate Teaching Assistant** *(January 2024 – Present)*  
 
