@@ -29,9 +29,9 @@ I serve as a **Graduate Teaching Assistant (GTA)** in the **Department of Civil 
 
 - Assisted in laboratory sessions and grading for undergraduate engineering courses.
 - Courses included:
-  - 🛤 **Surveying Lab** – *Hands-on field experience with surveying instruments and topographic mapping.*
-  - 🛣 **Highway Materials Lab** – *Testing and evaluating asphalt, concrete, and other construction materials.*
-  - ⚙ **Engineering Statics** – *Fundamentals of forces, equilibrium, and mechanics for civil structures.*
+  - **Surveying Lab** – *Hands-on field experience with surveying instruments and topographic mapping.*
+  - **Highway Materials Lab** – *Testing and evaluating asphalt, concrete, and other construction materials.*
+  - **Engineering Statics** – *Fundamentals of forces, equilibrium, and mechanics for civil structures.*
 
 ---
 
