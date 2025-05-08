@@ -3,8 +3,6 @@ title: Research
 layout: default
 ---
 
-# Research
-
 ## Current Research (PhD)
 I am currently a researcher at **Dr. Wissam Kontar’s lab** at the **University of Nebraska-Lincoln**, focusing on **automated vehicle (AV) behavior analysis based on empirical and simulation data** to improve safety and efficiency in mixed traffic environments.
 
@@ -22,3 +20,4 @@ I am currently a researcher at **Dr. Wissam Kontar’s lab** at the **University
 - Superpave Mixtures & Pavement Performance (*Jordan University of Science & Technology*)
 
 [See My Publications](publications.md)
+[Go Back to Homepage](index.md)
