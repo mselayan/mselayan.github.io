@@ -10,6 +10,7 @@ layout: default
 **Graduate Teaching Assistant** *(January 2024 – Present)*  
 
 **[See Research](research.md)**
+
 **[See Teaching](teaching.md)**
 ---
 
@@ -32,6 +33,7 @@ layout: default
 **Teaching Assistant** *(2012-2013)*  
 
 **[See Research](research.md)**
+
 **[See Teaching](teaching.md)**
 
 ---
