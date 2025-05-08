@@ -15,14 +15,14 @@ I serve as a **Graduate Teaching Assistant (GTA)** in the **Department of Civil 
 ### **Courses TA'ed**  
 
 #### **CIVE 202 - Civil Engineering Analysis II**  
-- A **project-based course** focused on developing **computational and programming skills** for civil engineers.  
-- Assisted students with **Python** for solving engineering problems.  
-- Provided guidance on **numerical methods, data analysis, and automation in civil engineering**.
+- A project-based course focused on developing computational and programming skills for civil engineers.  
+- Assisted students with Python for solving engineering problems.  
+- Provided guidance on numerical methods, data analysis, and automation in civil engineering.
 
 #### **CIVE 361 - Principles of Transportation Engineering**  
-- Introduction to **highway engineering, traffic operations, and planning**.  
-- Assisted students in **traffic flow theory, geometric design, signal control analysis and transportation demand forecast**.  
-- Conducted **tutorials, graded assignments, and provided feedback** on course projects.
+- Introduction to highway engineering, traffic operations, and planning.  
+- Assisted students in traffic flow theory, geometric design, signal control analysis and transportation demand forecast.  
+- Conducted tutorials, graded assignments, and provided feedback on course projects.
 
 ---
 
@@ -38,6 +38,6 @@ I serve as a **Graduate Teaching Assistant (GTA)** in the **Department of Civil 
 ---
 
 
-**[Back to Home](index.md)**  
-**[View My Research](research.md)**  
-**[Explore My Professional Experience](experience.md)**  
+[Back to Home](index.md)   
+[View My Research](research.md)   
+[Explore My Professional Experience](experience.md)     
