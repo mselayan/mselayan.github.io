@@ -9,9 +9,8 @@ layout: default
 **Graduate Research Assistant** *(January 2023 – Present)*  
 **Graduate Teaching Assistant** *(January 2024 – Present)*  
 
-**[See Research](research.md)**
-
-**[See Teaching](teaching.md)**
+[See Research](research.md)   
+[See Teaching](teaching.md)
 
 ---
 
@@ -19,13 +18,13 @@ layout: default
 **Senior Transportation Engineer** *(January 2019 – January 2023)*  
 **Transportation Engineer** *(June 2013 – January 2019)*  
 
-- Led **over 100 projects** across **the UAE and MENA region**, covering **transportation master plans, traffic impact studies, and multimodal integration projects**.  
-- Developed **traffic simulations, congestion mitigation strategies, and demand modeling** using cutting-edge tools.  
-- Conducted **concept design reviews** ensuring **sustainable and feasible transport solutions**.  
-- Work experience comprises:  
-  - **20 Transportation Master Plans** (8 as Project Manager).  
-  - **64 Traffic Impact Studies** (40 as Project Manager).  
-  - **Freight Transport Plans**, **Integration Studies**, **Parking Studies**, and **Traffic Management Plans**.
+- Led over 100 projects across the UAE and MENA region, covering transportation master plans, traffic impact studies, and multimodal integration projects**.  
+- Developed traffic simulations, congestion mitigation strategies, and demand modeling using cutting-edge tools.  
+- Conducted concept design reviews ensuring sustainable and feasible transport solutions.  
+- Work experience comprised:  
+  - 20 Transportation Master Plans (8 as Project Manager).  
+  - 64 Traffic Impact Studies (40 as Project Manager).  
+  - Freight Transport Plans, Integration Studies, Parking Studies, and Traffic Management Plans.
 
 ---
 
@@ -33,9 +32,8 @@ layout: default
 **Research Assistant** *(2011)*  
 **Teaching Assistant** *(2012-2013)*  
 
-**[See Research](research.md)**
-
-**[See Teaching](teaching.md)**
+[See Research](research.md)   
+[See Teaching](teaching.md)
 
 ---
 
@@ -72,4 +70,4 @@ layout: default
 
 ---
 
-**[Back to Home](index.md)**    
+[Back to Home](index.md)    
