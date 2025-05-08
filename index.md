@@ -5,7 +5,7 @@ layout: default
 
 ![DP](DP2.jpg)
 
-I am a **PhD Student** at the **University of Nebraska-Lincoln** and a **Senior Transportation Engineer** with over a decade of experience in **transportation planning** and **traffic engineering**. My work integrates **big data, machine learning, and smart data analytics** to enhance demand forecasting, traffic safety, and autonomous vehicle research.
+I am a PhD Student at the University of Nebraska-Lincoln and a Senior Transportation Engineer with over a decade of experience in transportation planning and traffic engineering. My work integrates big data, machine learning, artificial intelligence and smart data analytics to enhance automated vehicles behavior and interaction, demand forecasting and traffic safety.
 
 [About Me](about.md)  
 [Research](research.md)  
