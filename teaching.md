@@ -36,6 +36,6 @@ I serve as a **Graduate Teaching Assistant (GTA)** in the **Department of Civil 
 ---
 
 
-📌 **[Back to Home](index.md)**  
-📌 **[View My Research](research.md)**  
-📌 **[Explore My Professional Experience](experience.md)**  
+**[Back to Home](index.md)**  
+**[View My Research](research.md)**  
+**[Explore My Professional Experience](experience.md)**  
