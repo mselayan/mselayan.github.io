@@ -13,7 +13,7 @@ My **academic background** includes:
 - 🎓 **MSc in Civil Engineering (Transportation)** – *Jordan University of Science and Technology (Rank: 1st)*
 - 🎓 **BSc in Civil Engineering (Transportation)** – *Jordan University of Science and Technology (Rank: 16th)*
 
-I am particularly interested in **autonomated vehicle behavior**, **big data analytics**, **machine learning** and **transportation modeling**.
+I am particularly interested in **automated vehicle behavior**, **big data analytics**, **machine learning** and **transportation modeling**.
 
 [View My Research](research.md)  
 [Read My Publications](publications.md)
