@@ -19,6 +19,5 @@ I am currently a researcher at **Dr. Wissam Kontar’s lab** at the **University
 - Modeling Driver's Gap Acceptance Behavior Using Empirical Data (*Jordan University of Science & Technology*)
 - Superpave Mixtures & Pavement Performance (*Jordan University of Science & Technology*)
 
-[See My Publications](publications.md)
-
+[See My Publications](publications.md)   
 [Go Back to Homepage](index.md)
