@@ -2,6 +2,9 @@
 title: Publications
 layout: default
 ---
+# Publications
+
+This page highlights my scholarly contributions, including peer-reviewed journal articles, conference presentations, and technical reports. My research spans topics such as automated vehicle behavior, multimodal traffic modeling and transportation safety, often leveraging large-scale data and machine learning.
 
 ## Peer-Reviewed Journal Papers
 
