@@ -3,8 +3,6 @@ title: Publications
 layout: default
 ---
 
-# Publications
-
 ## Peer-Reviewed Journal Papers
 
 ### Published Papers
@@ -35,3 +33,4 @@ layout: default
 ---
 
 **[See My Full Google Scholar Profile](https://scholar.google.com/citations?user=4ypH5kAAAAAJ&hl=en)**
+**[Go Back to Homepage](index.md)**
