@@ -21,6 +21,6 @@ I am a PhD Student at the University of Nebraska-Lincoln and a Senior Transporta
 ## Contact
 📧 melayan2@huskers.unl.edu  
 📍 Lincoln, NE, USA  
-🔗 [Google Scholar](https://scholar.google.com/citations?user=4ypH5kAAAAAJ&hl=en) | [ORCID](https://orcid.org/0009-0001-2562-5694)  
+🔗 [Google Scholar](https://scholar.google.com/citations?user=4ypH5kAAAAAJ&hl=en) | [ORCID](https://orcid.org/0009-0001-2562-5694) | [ResearchGate](https://www.researchgate.net/profile/Mohammad-Elayan-2) | [LinkedIn](https://www.linkedin.com/in/mohammad-elayan-69096662)
 
 ---
