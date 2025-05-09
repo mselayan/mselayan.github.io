@@ -3,7 +3,9 @@ title: Professional Experience
 layout: default
 ---
 
-# Experience and Qualifications
+# Experience
+
+I'm a Graduate Research and Teaching Assistant at the University of Nebraska–Lincoln, and former Senior Transportation Engineer at TrafQuest (UAE), with 10+ years of experience in transportation planning, traffic engineering, and smart mobility analytics.
 
 ## University of Nebraska-Lincoln, Lincoln, NE, USA  
 **Graduate Research Assistant** *(January 2023 – Present)*  
