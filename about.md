@@ -20,7 +20,7 @@ I'm an avid soccer fan, a casual photographer, a lover of nature, and a lifelong
 
 Since moving to the U.S., I've tried to make the most of it: I visited 10 states in my first year and added 5 more in the second, exploring 10 national parks along the way. I've learned that I enjoy being outdoors as long as there’s a nice view, and indoors, as long as I have a controller, keyboard, or something to tinker with.
 
-<img src="GTNP-lr.jpg" alt="Grand Teton National Park - September, 2023" style="width: 600px; border-radius: 1px;" />
+<img src="GTNP-lr.jpg" alt="Grand Teton National Park - September, 2023" style="width: 600px; border-radius: 1px;" /> 
 
 *Grand Teton National Park on National Public Lands Day - September 2023.*
 
