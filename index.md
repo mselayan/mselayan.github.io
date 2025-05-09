@@ -6,7 +6,7 @@ layout: default
 ![DP](DP2.jpg)
 
 ## Brief Background
-I am a PhD Student at the University of Nebraska-Lincoln and a Senior Transportation Engineer with over a decade of experience in transportation planning and traffic engineering. My work integrates big data, machine learning, artificial intelligence and smart data analytics to enhance automated vehicles behavior and interaction, demand forecasting and traffic safety.
+I am a PhD student in Civil Engineering at the University of Nebraska–Lincoln, with a decade of experience in transportation planning and traffic engineering, including leading roles in Dubai, UAE. My current research focuses on automated vehicle behavior and data-driven safety analysis using machine learning and artificial intelligence. I also serve as a teaching assistant and contribute to collaborative projects in AV-human interaction, traffic safety, simulation and traffic calibration .
 
 [View my CV](Elayan_CV.pdf)
 
