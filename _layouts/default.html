@@ -1,110 +1,107 @@
 <!doctype html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    {% seo %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
-    {% include head-custom.html %}
     <style>
+      * {
+        box-sizing: border-box;
+      }
       body {
         margin: 0;
         font-family: sans-serif;
+        display: flex;
+        min-height: 100vh;
       }
-
       .sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 220px;
-        height: 100%;
+        width: 240px;
         background-color: #111;
         color: white;
-        padding: 1rem;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
-        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.5rem 1rem;
       }
-
-      .sidebar h2 {
+      .sidebar h1 {
+        font-size: 1.5rem;
         margin-top: 0;
-        color: #ccc;
-        font-size: 1.2rem;
-        border-bottom: 1px solid #444;
-        padding-bottom: 0.3rem;
-        margin-bottom: 1rem;
+        color: white;
+        margin-bottom: 1.5rem;
       }
-
-      .sidebar ul {
+      .nav-links {
+        flex-grow: 1;
+      }
+      .nav-links ul {
         list-style: none;
-        padding-left: 0;
-        font-size: 0.95rem;
+        padding: 0;
       }
-
-      .sidebar ul li {
-        margin-bottom: 0.6rem;
+      .nav-links li {
+        margin-bottom: 0.8rem;
       }
-
-      .sidebar ul li a {
+      .nav-links a {
         color: white;
         text-decoration: none;
       }
-
-      .sidebar ul li a:hover {
+      .nav-links a:hover {
         text-decoration: underline;
       }
-
+      .github-buttons a {
+        display: inline-block;
+        background-color: #b30000;
+        color: white;
+        text-decoration: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+      }
+      .footer {
+        font-size: 0.7rem;
+        color: #aaa;
+        margin-top: 2rem;
+      }
       .main-content {
-        margin-left: 240px;
-        padding: 1rem;
-        display: block;
+        flex-grow: 1;
+        padding: 2rem;
       }
     </style>
   </head>
   <body>
-
     <!-- Sidebar -->
     <div class="sidebar">
-      <h2>Navigation</h2>
-      <ul>
-        <li><a href="{{ '/' | relative_url }}">Home</a></li>
-        <li><a href="{{ '/research' | relative_url }}">Research</a></li>
-        <li><a href="{{ '/publications' | relative_url }}">Publications</a></li>
-        <li><a href="{{ '/teaching' | relative_url }}">Teaching</a></li>
-        <li><a href="{{ '/experience' | relative_url }}">Experience</a></li>
-        <li><a href="{{ '/Elayan_CV.pdf' | relative_url }}" target="_blank">Download CV</a></li>
-        <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
-      </ul>
+      <div>
+        <h1>Mohammad Elayan</h1>
+        <div class="nav-links">
+          <ul>
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/research' | relative_url }}">Research</a></li>
+            <li><a href="{{ '/publications' | relative_url }}">Publications</a></li>
+            <li><a href="{{ '/teaching' | relative_url }}">Teaching</a></li>
+            <li><a href="{{ '/experience' | relative_url }}">Experience</a></li>
+            <li><a href="{{ '/Elayan_CV.pdf' | relative_url }}" target="_blank">Download CV</a></li>
+            <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div class="github-buttons">
+          <a href="{{ site.github.repository_url }}">View On GitHub</a><br>
+          <a href="{{ site.github.owner_url }}">GitHub Profile</a>
+        </div>
+        <div class="footer">
+          <p>Hosted on <a href="https://pages.github.com" style="color:#aaa;">GitHub Pages</a><br>using a customized Dinky layout</p>
+        </div>
+      </div>
     </div>
 
-    <!-- Main Site Wrapper (Dinky layout) -->
-    <div class="wrapper main-content">
-      <header>
-        <h1 class="header">{{ site.title | default: site.github.repository_name }}</h1>
-        <p class="header">{{ site.description | default: site.github.project_tagline }}</p>
-
-        <ul>
-          {% if site.show_downloads %}
-            <li class="download"><a class="buttons" href="{{ site.github.zip_url }}">Download ZIP</a></li>
-            <li class="download"><a class="buttons" href="{{ site.github.tar_url }}">Download TAR</a></li>
-          {% endif %}
-          <li><a class="buttons github" href="{{ site.github.repository_url }}">View On GitHub</a></li>
-          {% if site.github.is_user_page %}
-            <li><a class="buttons github" href="{{ site.github.owner_url }}">GitHub Profile</a></li>
-          {% endif %}
-        </ul>
-      </header>
-
-      <section>
-        {{ content }}
-      </section>
-
-      <footer>
-        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
-      </footer>
+    <!-- Main Content -->
+    <div class="main-content">
+      {{ content }}
     </div>
-
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
   </body>
 </html>
