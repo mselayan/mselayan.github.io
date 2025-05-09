@@ -28,7 +28,7 @@ This work underscores the importance of explicitly modeling consensus trade-offs
 
 In collaboration with NDOT, we developed Random Forest models to calibrate StreetLight location-based services (LBS) data into pedestrian, bicycle, and vehicle volumes using traditional count data, EPA Smart Location Database metrics, and roadway attributes. This work demonstrates the potential of combining commercial mobility data with public datasets for scalable, mode-specific traffic estimation.
 
-📂 [See the Calibration Code on GitHub](https://github.com/Hawkins-TECH-Lab/NDOT-Calibration)
+📂 [See the Calibration Code on GitHub](https://github.com/Hawkins-TECH-Lab/NDOT-Calibration)   
 📄 [Full Text Available on ResearchGate](https://www.researchgate.net/publication/390051928_Integrating_StreetLight_EPS_Smart_Location_Data_and_Road_Attributes_A_Random_Forest_Approach_to_Multi-Modal_Traffic_Calibration_in_Lincoln_Nebraska)
 
 ### Modeling Crash Count and Severity Using Street-Level Imagery  
