@@ -21,6 +21,6 @@ I am a PhD student in Civil Engineering at the University of Nebraska–Lincoln,
 ## Contact
 📧 melayan2@huskers.unl.edu  
 📍 Lincoln, NE, USA  
-🔗 [Google Scholar](https://scholar.google.com/citations?user=4ypH5kAAAAAJ&hl=en) | [ORCID](https://orcid.org/0009-0001-2562-5694) | [ResearchGate](https://www.researchgate.net/profile/Mohammad-Elayan-2) | [LinkedIn](https://www.linkedin.com/in/mohammad-elayan-69096662)
+🔗 [Google Scholar](https://scholar.google.com/citations?hl=en&user=4ypH5kAAAAAJ&view_op=list_works&sortby=pubdate) | [ORCID](https://orcid.org/0009-0001-2562-5694) | [ResearchGate](https://www.researchgate.net/profile/Mohammad-Elayan-2) | [LinkedIn](https://www.linkedin.com/in/mohammad-elayan-69096662)
 
 ---
