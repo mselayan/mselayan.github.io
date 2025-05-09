@@ -3,7 +3,7 @@ title: Mohammad Elayan
 layout: default
 ---
 
-![DP](DP2.jpg)
+![DP](DP3.jpg)
 
 ## Brief Background
 I am a PhD student in Civil Engineering at the University of Nebraska–Lincoln, with a decade of experience in transportation planning and traffic engineering, including leading roles in Dubai, UAE. My current research focuses on automated vehicle behavior and data-driven safety analysis using machine learning and artificial intelligence. I also serve as a teaching assistant and contribute to collaborative projects in AV-human interaction, traffic safety, simulation and traffic calibration .
