@@ -18,7 +18,7 @@ Lincoln, Nebraska, ZIP 68503
 
 ### Profiles
 
-- [Google Scholar](https://scholar.google.com/citations?user=4ypH5kAAAAAJ&hl=en)
+- [Google Scholar](https://scholar.google.com/citations?hl=en&user=4ypH5kAAAAAJ&view_op=list_works&sortby=pubdate)
 - [ORCID iD: 0009-0001-2562-5694](https://orcid.org/0009-0001-2562-5694)
 - [ResearchGate](https://www.researchgate.net/profile/Mohammad-Elayan-2)
 - [LinkedIn](https://www.linkedin.com/in/mohammad-elayan-69096662)
