@@ -31,20 +31,25 @@ This work underscores the importance of explicitly modeling consensus trade-offs
 
 This study leverages Mapillary Open Street-View (OSV) detections and StreetLight-calibrated traffic data to enhance pedestrian crash modeling in Lincoln, NE. By integrating these smart data sources, the work demonstrated how detailed real-world variables—mapped at the level of uniform grid squares—improve crash count and severity prediction using both generalized linear models and machine learning approaches.
 
-<div style="max-width: 500px; margin: auto;">
-
-*Results of the Severity RF Classifier Model with Balanced Weights*
-
-| Class                          | Precision | Recall | F1-score | Support |
-|--------------------------------|-----------|--------|----------|---------|
-| 1 (Property damage only)       | 0.40      | 1.00   | 0.57     | 12      |
-| 2 (Possible injury)            | 0.86      | 0.74   | 0.80     | 262     |
-| 3 (Visible injury)             | 0.82      | 0.81   | 0.82     | 264     |
-| 4 (Serious injury)             | 0.73      | 0.85   | 0.79     | 110     |
-| 5 (Fatal)                      | 0.88      | 1.00   | 0.94     | 15      |
-| **Overall Accuracy**           |           |        | 0.80     | 663     |
-
+<div style="max-width: 500px; margin: auto; font-size: 0.9rem;">
+  <p><strong>Results of the Severity RF Classifier Model with Balanced Weights</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Class</th><th>Precision</th><th>Recall</th><th>F1-score</th><th>Support</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1 (Property damage only)</td><td>0.40</td><td>1.00</td><td>0.57</td><td>12</td></tr>
+      <tr><td>2 (Possible injury)</td><td>0.86</td><td>0.74</td><td>0.80</td><td>262</td></tr>
+      <tr><td>3 (Visible injury)</td><td>0.82</td><td>0.81</td><td>0.82</td><td>264</td></tr>
+      <tr><td>4 (Serious injury)</td><td>0.73</td><td>0.85</td><td>0.79</td><td>110</td></tr>
+      <tr><td>5 (Fatal)</td><td>0.88</td><td>1.00</td><td>0.94</td><td>15</td></tr>
+      <tr><td><strong>Overall Accuracy</strong></td><td></td><td></td><td>0.80</td><td>663</td></tr>
+    </tbody>
+  </table>
 </div>
+
 
 📄 [Preprint Available on ResearchGate](https://www.researchgate.net/publication/382926999_Better_Safety_Analyses_through_Smarter_Data_Adding_Open-Street-View_and_Traffic_Calibrated-LBS_Data_to_Pedestrian_Crash_Analysis_in_Lincoln_NE)  
 
