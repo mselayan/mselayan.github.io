@@ -40,7 +40,6 @@ This study leverages Mapillary Open Street-View (OSV) detections and StreetLight
 | 3 (Visible injury)             | 0.82      | 0.81   | 0.82     | 264     |
 | 4 (Serious injury)             | 0.73      | 0.85   | 0.79     | 110     |
 | 5 (Fatal)                      | 0.88      | 1.00   | 0.94     | 15      |
-|                                |           |        |          |         |
 | **Overall Accuracy**           |           |        | 0.80     | 663     |
 
 📄 [Preprint Available on ResearchGate](https://www.researchgate.net/publication/382926999_Better_Safety_Analyses_through_Smarter_Data_Adding_Open-Street-View_and_Traffic_Calibrated-LBS_Data_to_Pedestrian_Crash_Analysis_in_Lincoln_NE)  
