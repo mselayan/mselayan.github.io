@@ -31,7 +31,7 @@ This work underscores the importance of explicitly modeling consensus trade-offs
 
 This study leverages Mapillary Open Street-View (OSV) detections and StreetLight-calibrated traffic data to enhance pedestrian crash modeling in Lincoln, NE. By integrating these smart data sources, the work demonstrated how detailed real-world variables—mapped at the level of uniform grid squares—improve crash count and severity prediction using both generalized linear models and machine learning approaches.
 
-<div style="max-width: 500px; margin: auto; font-size: 0.9rem;">
+<div style="max-width: 600px; margin: auto; font-size: 0.9rem;">
   <p><strong>Results of the Severity RF Classifier Model with Balanced Weights</strong></p>
   <table>
     <thead>
