@@ -8,8 +8,9 @@ I am currently a researcher at **Dr. Wissam Kontar’s lab** at the University o
 
 ### Key Topics:
 - Empirical Analysis of AV Interaction and Behavior in Urban Mixed Traffic
-- Designing Consensus-Aware Automated Vehicles for Urban Mixed Traffic
-- Big Data and Smart Data for Traffic Safety
+- Designing Consensus-Aware Automated Vehicles under Competing Objectives
+- AV Behavior Trade-offs in Varying Traffic Contexts
+- Big Data and Smart Data for Traffic Safety Analysis
 - Machine Learning in Demand Forecasting and Safety Analysis
 - Activity Sequencing and Dynamic Time Warping (DTW)  
 
@@ -24,13 +25,6 @@ This work underscores the importance of explicitly modeling consensus trade-offs
 📄 [Read the Paper on arXiv](https://doi.org/10.48550/arXiv.2505.04379)  
 📂 [See the Analysis Code on GitHub](https://github.com/wissamkontar/Consensus-AV-Analysis)
 
-### Calibrating Traffic with LBS Data and Smart Data
-
-In collaboration with NDOT, we developed Random Forest models to calibrate StreetLight location-based services (LBS) data into pedestrian, bicycle, and vehicle volumes using traditional count data, EPA Smart Location Database metrics, and roadway attributes. This work demonstrates the potential of combining commercial mobility data with public datasets for scalable, mode-specific traffic estimation.
-
-📂 [See the Calibration Code on GitHub](https://github.com/Hawkins-TECH-Lab/NDOT-Calibration)   
-📄 [Full Text Available on ResearchGate](https://www.researchgate.net/publication/390051928_Integrating_StreetLight_EPS_Smart_Location_Data_and_Road_Attributes_A_Random_Forest_Approach_to_Multi-Modal_Traffic_Calibration_in_Lincoln_Nebraska)
-
 ### Modeling Crash Count and Severity Using Street-Level Imagery  
 
 This study leverages Mapillary Open Street-View (OSV) detections and StreetLight-calibrated traffic data to enhance pedestrian crash modeling in Lincoln, NE. By integrating these smart data sources, the work demonstrated how detailed real-world variables—mapped at the level of uniform grid squares—improve crash count and severity prediction using both generalized linear models and machine learning approaches.
@@ -41,7 +35,13 @@ This study leverages Mapillary Open Street-View (OSV) detections and StreetLight
 - Integration of Location-Based Service (LBS) Data and Smart Data for Traffic Calibration (*Lincoln, NE*)
 - Modeling Pedestrian and Bicyclist Crash Exposure using Location-Based Service Data (*Nebraska DOT*)
 - Modeling Driver's Gap Acceptance Behavior Using Empirical Data (*Jordan University of Science & Technology*)
-- Superpave Mixtures & Pavement Performance (*Jordan University of Science & Technology*)
+
+### Calibrating Traffic with LBS Data and Smart Data
+
+In collaboration with NDOT, we developed Random Forest models to calibrate StreetLight location-based services (LBS) data into pedestrian, bicycle, and vehicle volumes using traditional count data, EPA Smart Location Database metrics, and roadway attributes. This work demonstrates the potential of combining commercial mobility data with public datasets for scalable, mode-specific traffic estimation.
+
+📂 [See the Calibration Code on GitHub](https://github.com/Hawkins-TECH-Lab/NDOT-Calibration)   
+📄 [Full Text Available on ResearchGate](https://www.researchgate.net/publication/390051928_Integrating_StreetLight_EPS_Smart_Location_Data_and_Road_Attributes_A_Random_Forest_Approach_to_Multi-Modal_Traffic_Calibration_in_Lincoln_Nebraska)
 
 [See My Publications](publications.md)   
 [Go Back to Homepage](index.md)
