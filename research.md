@@ -20,7 +20,7 @@ In our recent study, *"Consensus-Aware AV Behavior: Trade-offs Between Safety, I
 
 We proposed a new evaluation framework that considers three interdependent performance dimensions: safety, interaction quality, and traffic performance. Through empirical analysis, we found that AVs often prioritize safety but fall short in interaction clarity and traffic flow efficiency. Notably, only **1.63%** of AV–pedestrian interaction frames achieved full consensus across all three dimensions.
 
-<img src="AV_Obj.png" alt="AV Objectives" style="width: 500px; border-radius: 1px;" />
+<img src="AV_Obj.png" alt="AV Objectives" style="width: 300px; border-radius: 1px;" />
 
 This work underscores the importance of explicitly modeling consensus trade-offs when designing AV behavior policies. We are now advancing to the next phase: developing a consensus-aware behavioral framework to help AVs balance these dimensions in real-world deployment.
 
