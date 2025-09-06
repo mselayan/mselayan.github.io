@@ -11,13 +11,15 @@ This page highlights my scholarly contributions, including peer-reviewed journal
 ## Peer-Reviewed Journal Papers
 
 ### Published Papers
-1. **Elayan, M.**, Aldridge, N., Hawkins, J. & Nam, Y. (2025). Forthcoming. *Integrating StreetLight, EPS Smart Location Data and Road Attributes: A Random Forest Approach to Multi-Modal Traffic Calibration in Lincoln, Nebraska.* Journal of Transportation Engineering, Part A: Systems, 151(8).
+1. **Elayan, M.**, Aldridge, N., Hawkins, J. & Nam, Y. (2025). *Integrating StreetLight, EPS Smart Location Data and Road Attributes: A Random Forest Approach to Multi-Modal Traffic Calibration in Lincoln, Nebraska.* Journal of Transportation Engineering, Part A: Systems, 151(8).
 10. Al-Khateeb, G., Al-Suleiman, T., Khedaywi, T. & **Elayan, M.** (2016). *Studying Rutting Performance of Superpave Mixtures.* Road Materials and Pavement Design, 19(2).
 11. Al-Suleiman, T. & **Elayan, M.** (2013). *Gap Acceptance Behavior at U-Turn Median Openings – Case Study in Jordan.* Jordan Journal of Civil Engineering, 7(3).
 12. Alsheyab, M., Khedaywi, T. & **Elayan, M.** (2013). *Laboratory Study on Solidification/Stabilization of Unwanted Medications Using Asphalt as a Binder.* Journal of Material Cycles and Waste Management, 15(2).
 
+### Accepted Papers
+1. **Elayan, M.**, Karki, S. & Hawkins, J. (2025). *Better Safety Analyses through Smarter Data: Adding Open-Street-View and Traffic Calibrated-LBS Data to Pedestrian Crash Analysis in Lincoln, NE.* Transportation Research Record.
+
 ### Under Review
-1. **Elayan, M.**, Karki, S. & Hawkins, J. (2025). *Better Safety Analyses through Smarter Data: Adding Open-Street-View and Traffic Calibrated-LBS Data to Pedestrian Crash Analysis in Lincoln, NE.* Transportation Research Record *(Under Review)*.
 2. Armantalab, O., **Elayan, M.** & Hawkins, J. (2025). *Multi-Stage Clustering of Daily Activity Time Series: Patterns and Socio-Demographic Insights.* Travel Behaviour and Society *(Under Review)*.
 
 ---
@@ -40,3 +42,4 @@ This page highlights my scholarly contributions, including peer-reviewed journal
 
 [View My Google Scholar Profile](https://scholar.google.com/citations?hl=en&user=4ypH5kAAAAAJ&view_op=list_works&sortby=pubdate)   
 [Go Back to Homepage](index.md)
+
