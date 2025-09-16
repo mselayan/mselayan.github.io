@@ -26,7 +26,7 @@ Since moving to the U.S., I've tried to make the most of it: I visited 10 states
 
 <img src="NP_Collage.png" 
      alt="Collage" 
-     style="width: 100%; max-width: 100%; border-radius: 1px;" />
+     style="width: 100%; max-width: 100%; border-radius: 1px; opacity: 0.7;" />
 
 *Collecting states like souvenirs, but way heavier on the SD card.*
 
@@ -35,6 +35,7 @@ I was born and raised in the UAE, and I speak both Arabic and English. I’m als
 [View My Research](research.md)  
 [Read My Publications](publications.md)  
 [Go Back to Homepage](index.md)
+
 
 
 
