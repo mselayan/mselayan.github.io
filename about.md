@@ -4,7 +4,7 @@ layout: default
 ---
 ## About Me:
 
-<img src="DP4.png" alt="Mohammad Elayan" style="width: 220px; border-radius: 1px;" />
+<img src="DP5.png" alt="Mohammad Elayan" style="width: 220px; border-radius: 1px;" />
 
 I am a PhD student in Civil Engineering at the University of Nebraska–Lincoln, where my research focuses on the empirical and simulation-based analysis of automated vehicles behavior. My work seeks to refine AV driving and interactions in diverse traffic conditions, drawing on methods that stretch from trial-and-error to artificial intelligence.
 
@@ -31,6 +31,7 @@ I was born and raised in the UAE, and I speak both Arabic and English. I’m als
 [View My Research](research.md)  
 [Read My Publications](publications.md)  
 [Go Back to Homepage](index.md)
+
 
 
 
