@@ -4,7 +4,7 @@ layout: default
 ---
 # Publications
 
-<img src="DP3.png" 
+<img src="DP4.png" 
      alt="Mohammad Elayan" 
      style="float: right; width: 180px; max-width: 50%; height: auto; border-radius: 0; margin-left: 15px; margin-bottom: 10px;" />
 
@@ -47,6 +47,7 @@ This page highlights my scholarly contributions, including peer-reviewed journal
 
 [View My Google Scholar Profile](https://scholar.google.com/citations?hl=en&user=4ypH5kAAAAAJ&view_op=list_works&sortby=pubdate)   
 [Go Back to Homepage](index.md)
+
 
 
 
