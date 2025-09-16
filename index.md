@@ -3,11 +3,12 @@ title: Mohammad Elayan
 layout: default
 ---
 
+## Brief Background
+
 <img src="DP3.png" 
      alt="Mohammad Elayan" 
      style="float: right; width: 220px; height: auto; border-radius: 0; margin-left: 15px; margin-bottom: 10px;" />
 
-## Brief Background
 I am a PhD student in Civil Engineering at the University of Nebraska–Lincoln, with a decade of experience in transportation planning and traffic engineering, including leading roles in Dubai, UAE. My current research focuses on automated vehicle behavior and data-driven safety analysis using machine learning and artificial intelligence. I also serve as a teaching assistant and contribute to collaborative projects in AV-human interaction, traffic safety, simulation and traffic calibration.
 
 [View my CV](Elayan_CV.pdf)
@@ -46,5 +47,6 @@ Our paper titled *"Integrating StreetLight Data, EPS Smart Location Data, and Ro
 🔗 [Google Scholar](https://scholar.google.com/citations?hl=en&user=4ypH5kAAAAAJ&view_op=list_works&sortby=pubdate) | [ORCID](https://orcid.org/0009-0001-2562-5694) | [ResearchGate](https://www.researchgate.net/profile/Mohammad-Elayan-2) | [LinkedIn](https://www.linkedin.com/in/mohammad-elayan-69096662)
 
 ---
+
 
 
