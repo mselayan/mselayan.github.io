@@ -6,7 +6,7 @@ layout: default
 
 <img src="DP4.png" 
      alt="Mohammad Elayan" 
-     style="float: right; width: 220px; height: auto; border-radius: 0; margin-left: 15px; margin-bottom: 10px;" />
+     style="float: right; width: 180px; height: auto; border-radius: 0; margin-left: 15px; margin-bottom: 10px;" />
 
 This page highlights my scholarly contributions, including peer-reviewed journal articles, conference presentations, and technical reports. My research spans topics such as automated vehicle behavior, multimodal traffic modeling and transportation safety, often leveraging large-scale data and machine learning.
 
@@ -46,6 +46,7 @@ This page highlights my scholarly contributions, including peer-reviewed journal
 
 [View My Google Scholar Profile](https://scholar.google.com/citations?hl=en&user=4ypH5kAAAAAJ&view_op=list_works&sortby=pubdate)   
 [Go Back to Homepage](index.md)
+
 
 
 
