@@ -1,158 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mohammad Elayan | PhD Student</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="scroll-smooth bg-white text-gray-900">
-    <!-- Navbar -->
-    <nav class="fixed w-full bg-white shadow z-50">
-      <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-        <a href="#hero" class="text-xl font-bold">Mohammad Elayan</a>
-        <div class="space-x-6">
-          <a href="#about" class="hover:text-blue-600">About</a>
-          <a href="#research" class="hover:text-blue-600">Research</a>
-          <a href="#publications" class="hover:text-blue-600">Publications</a>
-          <a href="#teaching" class="hover:text-blue-600">Teaching</a>
-          <a href="#experience" class="hover:text-blue-600">Experience</a>
-          <a href="#contact" class="hover:text-blue-600">Contact</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohammad Elayan - PhD Student & Transportation Researcher</title>
+  <meta name="description" content="PhD student in Civil Engineering at University of Nebraska–Lincoln, specializing in automated vehicle behavior, transportation safety, and data-driven modeling.">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    .card-hover { transition: all 0.3s ease; }
+    .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    .fade-in { opacity: 0; transform: translateY(20px); animation: fadeIn 0.6s ease forwards; }
+    @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+    .stagger-1 { animation-delay: 0.1s; }
+    .stagger-2 { animation-delay: 0.2s; }
+    .stagger-3 { animation-delay: 0.3s; }
+    .stagger-4 { animation-delay: 0.4s; }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background: #667eea; transition: width 0.3s ease; }
+    .nav-link:hover::after { width: 100%; }
+    .profile-image { box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <h1 class="text-xl font-bold text-gray-900">Mohammad Elayan</h1>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-8">
+            <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</a>
+            <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">About</a>
+            <a href="#research" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Research</a>
+            <a href="#publications" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Publications</a>
+            <a href="#teaching" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Teaching</a>
+            <a href="#experience" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Experience</a>
+            <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>
+          </div>
+        </div>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
         </div>
       </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="hero" class="text-center py-24 bg-gray-100">
-      <img
-        src="https://mselayan.github.io/DP3.png"
-        alt="Mohammad Elayan"
-        class="w-48 h-48 lg:w-56 lg:h-56 rounded-full object-cover mx-auto mb-6"
-      />
-      <h1 class="text-4xl font-bold mb-4">Mohammad Elayan</h1>
-      <p class="text-lg max-w-2xl mx-auto">
-        PhD Student in Civil Engineering | University of Nebraska–Lincoln
-      </p>
-      <div class="mt-6 space-x-4">
-        <a
-          href="#research"
-          class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-          >Explore Research</a
-        >
-        <a
-          href="#contact"
-          class="px-6 py-2 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300"
-          >Get in Touch</a
-        >
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Home</a>
+        <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-blue-600">About</a>
+        <a href="#research" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Research</a>
+        <a href="#publications" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Publications</a>
+        <a href="#teaching" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Teaching</a>
+        <a href="#experience" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Experience</a>
+        <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Contact</a>
       </div>
-    </section>
+    </div>
+  </nav>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-      <div class="container mx-auto px-6 max-w-4xl">
-        <h2 class="text-3xl font-bold mb-6">About</h2>
-        <p class="mb-4">
-          I am a PhD student in Civil Engineering at the University of
-          Nebraska–Lincoln. My research focuses on transportation engineering,
-          with a special interest in autonomous vehicle (AV) safety,
-          pedestrian–vehicle interactions, and the use of machine learning to
-          improve predictive models in transportation systems.
-        </p>
-        <p>
-          I am passionate about integrating advanced data sources and innovative
-          methods to enhance road safety and transportation equity.
-        </p>
+  <!-- Hero -->
+  <section id="home" class="gradient-bg min-h-screen flex items-center justify-center pt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="text-white">
+        <h1 class="text-5xl lg:text-6xl font-bold mb-6 fade-in">Mohammad <span class="text-yellow-300">Elayan</span></h1>
+        <p class="text-xl lg:text-2xl mb-8 text-blue-100 fade-in stagger-1">PhD Student in Civil Engineering</p>
+        <p class="text-lg mb-8 text-blue-50 leading-relaxed fade-in stagger-2">Specializing in AV behavior, pedestrian safety, and ML-driven transportation systems at the University of Nebraska–Lincoln.</p>
+        <div class="flex flex-col sm:flex-row gap-4 fade-in stagger-3">
+          <a href="#research" class="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors shadow-lg"><i class="fas fa-robot mr-2"></i>Explore Research</a>
+          <a href="#contact" class="px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"><i class="fas fa-envelope mr-2"></i>Get in Touch</a>
+        </div>
       </div>
-    </section>
-
-    <!-- Research Section -->
-    <section id="research" class="py-20 bg-gray-50">
-      <div class="container mx-auto px-6 max-w-4xl">
-        <h2 class="text-3xl font-bold mb-6">Research</h2>
-        <p class="mb-4">
-          My research explores autonomous vehicle (AV) interactions with
-          pedestrians, headway stability in AV platoons, and the integration of
-          novel data sources into crash prediction models. This includes
-          analyzing post-encroachment time (PET), time-to-collision (TTC), and
-          other safety indicators using the Third Generation Simulation (TGSIM)
-          datasets.
-        </p>
-        <p>
-          I also examine the role of smart data sources like StreetLight
-          calibrated traffic volumes and Mapillary open-street-view detections
-          in pedestrian crash analysis. My work highlights the trade-offs
-          between traditional generalized linear models (GLMs) and modern
-          machine learning (ML) approaches in safety studies.
-        </p>
+      <div class="flex justify-center lg:justify-end fade-in stagger-4">
+        <img src="https://mselayan.github.io/DP3.png" alt="Mohammad Elayan" class="w-80 h-80 lg:w-96 lg:h-96 rounded-full object-cover profile-image">
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Publications Section -->
-    <section id="publications" class="py-20 bg-white">
-      <div class="container mx-auto px-6 max-w-4xl">
-        <h2 class="text-3xl font-bold mb-6">Publications</h2>
-        <ul class="list-disc list-inside space-y-3">
-          <li>
-            Elayan, M., Hawkins, J., & Karki, S. (2025). Better Safety Analyses
-            through Smarter Data: Adding Open-Street-View and Traffic
-            Calibrated-LBS Data to Pedestrian Crash Analysis in Lincoln, NE.
-            Presented at the TRB Annual Meeting.
-          </li>
-          <li>
-            Elayan, M. (2024). Consensus-Aware AV Behavior: Trade-offs Between
-            Safety, Interaction, and Performance in Mixed Urban Traffic. IEEE
-            Conference Proceedings.
-          </li>
-        </ul>
+  <!-- About -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">About</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
       </div>
-    </section>
+      <p class="text-lg text-gray-600 leading-relaxed mb-6">I am a PhD student in Civil Engineering at the University of Nebraska–Lincoln. My research focuses on AV safety, pedestrian–vehicle interactions, and machine learning in crash modeling. I aim to integrate advanced data sources and innovative methods to improve predictive accuracy and transportation equity.</p>
+    </div>
+  </section>
 
-    <!-- Teaching Section -->
-    <section id="teaching" class="py-20 bg-gray-50">
-      <div class="container mx-auto px-6 max-w-4xl">
-        <h2 class="text-3xl font-bold mb-6">Teaching</h2>
-        <p class="mb-4">
-          I have served as a teaching assistant for transportation engineering
-          courses, contributing to lectures, grading, and student support.
-        </p>
-        <p>
-          I aim to help students build both technical knowledge and practical
-          problem-solving skills in the classroom and beyond.
-        </p>
+  <!-- Research -->
+  <section id="research" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Research</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
       </div>
-    </section>
+      <p class="text-lg text-gray-600 leading-relaxed mb-6">I study AV–pedestrian interactions, platoon stability, and consensus-aware AV behavior. I analyze safety indicators like PET and TTC using TGSIM datasets, and explore the role of StreetLight traffic volumes and Mapillary detections in crash analysis. My work compares GLMs and ML models in safety prediction.</p>
+    </div>
+  </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-white">
-      <div class="container mx-auto px-6 max-w-4xl">
-        <h2 class="text-3xl font-bold mb-6">Experience</h2>
-        <p class="mb-4">
-          My professional and research experience spans transportation safety
-          analysis, machine learning applications in engineering, and spatial
-          data processing. I also collaborate across disciplines to explore how
-          data science can inform policy and infrastructure planning.
-        </p>
+  <!-- Publications -->
+  <section id="publications" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Publications</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
       </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50">
-      <div class="container mx-auto px-6 max-w-4xl text-center">
-        <h2 class="text-3xl font-bold mb-6">Contact</h2>
-        <p class="mb-4">
-          Feel free to reach out via email for collaborations or inquiries.
-        </p>
-        <a
-          href="mailto:melayan2@huskers.unl.edu"
-          class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-          >Email Me</a
-        >
+      <div class="space-y-6">
+        <div class="bg-gray-50 p-6 rounded-xl shadow-lg card-hover">
+          <h3 class="font-semibold text-gray-900 mb-2">Better Safety Analyses through Smarter Data</h3>
+          <p class="text-blue-600">TRB Annual Meeting, 2025</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-xl shadow-lg card-hover">
+          <h3 class="font-semibold text-gray-900 mb-2">Consensus-Aware AV Behavior</h3>
+          <p class="text-blue-600">IEEE ITSC, 2024</p>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white text-center py-6">
-      <p>&copy; 2025 Mohammad Elayan. All rights reserved.</p>
-    </footer>
-  </body>
+  <!-- Teaching -->
+  <section id="teaching" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Teaching</h2>
+      <div class="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
+      <p class="text-lg text-gray-600">Teaching assistant for transportation engineering courses, supporting lectures, grading, and mentoring students in applying theory to practice.</p>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Experience</h2>
+      <div class="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
+      <p class="text-lg text-gray-600">Professional and research experience includes transportation safety analysis, ML applications in engineering, and interdisciplinary projects linking data science and policy.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Contact</h2>
+      <div class="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
+      <p class="text-lg text-gray-600 mb-6">Reach out via email for collaborations or inquiries.</p>
+      <a href="mailto:melayan2@huskers.unl.edu" class="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700"><i class="fas fa-envelope mr-2"></i>Email Me</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto text-center">
+      <h3 class="text-2xl font-bold mb-4">Mohammad Elayan</h3>
+      <p class="text-gray-300 mb-6">PhD Student in Civil Engineering | Transportation Researcher</p>
+      <p class="text-gray-400 text-sm">© 2025 Mohammad Elayan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
 </html>
