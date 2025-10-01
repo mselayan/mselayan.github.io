@@ -1,163 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohammad Elayan</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="font-sans leading-relaxed text-gray-800 bg-gray-50">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohammad Elayan | PhD Student</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="scroll-smooth bg-white text-gray-900">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white shadow z-50">
+      <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <a href="#hero" class="text-xl font-bold">Mohammad Elayan</a>
+        <div class="space-x-6">
+          <a href="#about" class="hover:text-blue-600">About</a>
+          <a href="#research" class="hover:text-blue-600">Research</a>
+          <a href="#publications" class="hover:text-blue-600">Publications</a>
+          <a href="#teaching" class="hover:text-blue-600">Teaching</a>
+          <a href="#experience" class="hover:text-blue-600">Experience</a>
+          <a href="#contact" class="hover:text-blue-600">Contact</a>
+        </div>
+      </div>
+    </nav>
 
-  <!-- Navigation -->
-  <nav class="bg-white shadow fixed top-0 left-0 w-full z-50">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6">
-      <h1 class="text-xl font-bold">Mohammad Elayan</h1>
-      <ul class="flex space-x-6">
-        <li><a href="#about" class="hover:text-blue-600">About</a></li>
-        <li><a href="#research" class="hover:text-blue-600">Research</a></li>
-        <li><a href="#publications" class="hover:text-blue-600">Publications</a></li>
-        <li><a href="#teaching" class="hover:text-blue-600">Teaching</a></li>
-        <li><a href="#experience" class="hover:text-blue-600">Experience</a></li>
-        <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+    <!-- Hero Section -->
+    <section id="hero" class="text-center py-24 bg-gray-100">
+      <img
+        src="https://mselayan.github.io/DP3.png"
+        alt="Mohammad Elayan"
+        class="w-48 h-48 lg:w-56 lg:h-56 rounded-full object-cover mx-auto mb-6"
+      />
+      <h1 class="text-4xl font-bold mb-4">Mohammad Elayan</h1>
+      <p class="text-lg max-w-2xl mx-auto">
+        PhD Student in Civil Engineering | University of Nebraska–Lincoln
+      </p>
+      <div class="mt-6 space-x-4">
+        <a
+          href="#research"
+          class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+          >Explore Research</a
+        >
+        <a
+          href="#contact"
+          class="px-6 py-2 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300"
+          >Get in Touch</a
+        >
+      </div>
+    </section>
 
-  <!-- Hero Section -->
-  <section id="hero" class="text-center py-24">
-    <img src="DP3.png" alt="Mohammad Elayan" class="w-80 h-80 lg:w-96 lg:h-96 rounded-full object-cover mx-auto mb-6">
-    <h1 class="text-4xl font-bold mb-4">Mohammad Elayan</h1>
-    <p class="text-lg max-w-2xl mx-auto">PhD Student in Civil Engineering | University of Nebraska–Lincoln</p>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <h2 class="text-3xl font-bold mb-6">About</h2>
+        <p class="mb-4">
+          I am a PhD student in Civil Engineering at the University of
+          Nebraska–Lincoln. My research focuses on transportation engineering,
+          with a special interest in autonomous vehicle (AV) safety,
+          pedestrian–vehicle interactions, and the use of machine learning to
+          improve predictive models in transportation systems.
+        </p>
+        <p>
+          I am passionate about integrating advanced data sources and innovative
+          methods to enhance road safety and transportation equity.
+        </p>
+      </div>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="container mx-auto py-16 px-6">
-    <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
-    <p>I am a PhD student in Civil Engineering at the University of Nebraska–Lincoln, where my research focuses on the empirical and simulation-based analysis of automated vehicle behavior. My work seeks to refine AV driving and interactions in diverse traffic conditions, drawing on methods that stretch from trial-and-error to artificial intelligence.</p>
-    <p class="mt-4">Before starting my doctorate, I spent nearly a decade in Dubai, UAE, where I grew into a Senior Transportation Engineer role and led more than 100 transportation projects across the MENA region. These included transportation master plans, traffic impact studies, and multimodal integration projects for major developments and city-scale planning efforts. My role also involved producing traffic simulations, conducting feasibility and sustainability reviews, and developing demand forecasting models.</p>
-    <p class="mt-4">Academically, I hold both a Master’s and Bachelor’s degree in Civil Engineering (Transportation) from the Jordan University of Science and Technology.</p>
-    <p class="mt-4">In my current role as a Graduate Research Assistant, I explore the intersection of automated mobility, data-driven planning, and traffic safety, with particular interest in methods that combine spatiotemporal data, simulation tools, and machine learning and artificial intelligence frameworks to support more intelligent and adaptive transportation systems.</p>
-    <p class="mt-4">Outside of engineering and research, I enjoy football, photography, travel, and gaming. Since moving to the U.S., I've visited 15 states and explored 10 national parks. I was born and raised in the UAE, speak both Arabic and English, and am a proud father of one daughter.</p>
-  </section>
+    <!-- Research Section -->
+    <section id="research" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <h2 class="text-3xl font-bold mb-6">Research</h2>
+        <p class="mb-4">
+          My research explores autonomous vehicle (AV) interactions with
+          pedestrians, headway stability in AV platoons, and the integration of
+          novel data sources into crash prediction models. This includes
+          analyzing post-encroachment time (PET), time-to-collision (TTC), and
+          other safety indicators using the Third Generation Simulation (TGSIM)
+          datasets.
+        </p>
+        <p>
+          I also examine the role of smart data sources like StreetLight
+          calibrated traffic volumes and Mapillary open-street-view detections
+          in pedestrian crash analysis. My work highlights the trade-offs
+          between traditional generalized linear models (GLMs) and modern
+          machine learning (ML) approaches in safety studies.
+        </p>
+      </div>
+    </section>
 
-  <!-- Research Section -->
-  <section id="research" class="container mx-auto py-16 px-6 bg-gray-100">
-    <h2 class="text-3xl font-bold mb-6 text-center">Research</h2>
-    <p>I am currently a researcher at Dr. Wissam Kontar’s lab at the University of Nebraska-Lincoln, focusing on automated vehicle (AV) behavior analysis based on empirical and simulation data to improve safety and efficiency in mixed traffic environments.</p>
+    <!-- Publications Section -->
+    <section id="publications" class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <h2 class="text-3xl font-bold mb-6">Publications</h2>
+        <ul class="list-disc list-inside space-y-3">
+          <li>
+            Elayan, M., Hawkins, J., & Karki, S. (2025). Better Safety Analyses
+            through Smarter Data: Adding Open-Street-View and Traffic
+            Calibrated-LBS Data to Pedestrian Crash Analysis in Lincoln, NE.
+            Presented at the TRB Annual Meeting.
+          </li>
+          <li>
+            Elayan, M. (2024). Consensus-Aware AV Behavior: Trade-offs Between
+            Safety, Interaction, and Performance in Mixed Urban Traffic. IEEE
+            Conference Proceedings.
+          </li>
+        </ul>
+      </div>
+    </section>
 
-    <h3 class="text-2xl font-semibold mt-8 mb-4">Key Topics</h3>
-    <ul class="list-disc ml-6">
-      <li>Empirical Analysis of AV Interaction and Behavior in Urban Mixed Traffic</li>
-      <li>Designing Consensus-Aware Automated Vehicles under Competing Objectives</li>
-      <li>AV Behavior Trade-offs in Varying Traffic Contexts</li>
-      <li>Big Data and Smart Data for Traffic Safety Analysis</li>
-      <li>Machine Learning in Demand Forecasting and Safety Analysis</li>
-      <li>Activity Sequencing and Dynamic Time Warping (DTW)</li>
-    </ul>
+    <!-- Teaching Section -->
+    <section id="teaching" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <h2 class="text-3xl font-bold mb-6">Teaching</h2>
+        <p class="mb-4">
+          I have served as a teaching assistant for transportation engineering
+          courses, contributing to lectures, grading, and student support.
+        </p>
+        <p>
+          I aim to help students build both technical knowledge and practical
+          problem-solving skills in the classroom and beyond.
+        </p>
+      </div>
+    </section>
 
-    <h3 class="text-2xl font-semibold mt-8 mb-4">Selected Studies</h3>
-    <p><strong>Consensus-Aware AV Behavior:</strong> We analyzed TGSIM trajectory data to evaluate safety, interaction, and performance trade-offs. Only 1.63% of AV–pedestrian interaction frames achieved consensus across all three dimensions.</p>
-    <div class="flex justify-center my-6">
-      <figure class="text-center">
-        <img src="AV_Obj.png" alt="Consensus-Aware AV Behavior Objectives" class="rounded shadow-lg mx-auto max-w-md">
-        <figcaption class="mt-2 text-sm text-gray-600">Consensus dimensions in AV behavior analysis</figcaption>
-      </figure>
-    </div>
-    <p><a href="https://doi.org/10.48550/arXiv.2505.04379" class="text-blue-600">Read the Paper on arXiv</a></p>
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <h2 class="text-3xl font-bold mb-6">Experience</h2>
+        <p class="mb-4">
+          My professional and research experience spans transportation safety
+          analysis, machine learning applications in engineering, and spatial
+          data processing. I also collaborate across disciplines to explore how
+          data science can inform policy and infrastructure planning.
+        </p>
+      </div>
+    </section>
 
-    <p class="mt-6"><strong>Crash Count and Severity Modeling:</strong> Integrated Mapillary Open Street-View detections and StreetLight-calibrated traffic data to improve pedestrian crash prediction. <a href="https://www.researchgate.net/publication/382926999" class="text-blue-600">Read Preprint</a></p>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6 max-w-4xl text-center">
+        <h2 class="text-3xl font-bold mb-6">Contact</h2>
+        <p class="mb-4">
+          Feel free to reach out via email for collaborations or inquiries.
+        </p>
+        <a
+          href="mailto:melayan2@huskers.unl.edu"
+          class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+          >Email Me</a
+        >
+      </div>
+    </section>
 
-    <p class="mt-6"><strong>Traffic Calibration:</strong> Developed Random Forest models to calibrate StreetLight LBS data with actual volumes using EPA Smart Location metrics and roadway attributes.</p>
-    <div class="flex justify-center my-6">
-      <figure class="text-center">
-        <img src="SHAP_Bike.png" alt="SHAP analysis for bike model" class="rounded shadow-lg mx-auto max-w-lg">
-        <figcaption class="mt-2 text-sm text-gray-600">SHAPley plot for the bicycle volume model</figcaption>
-      </figure>
-    </div>
-    <p><a href="https://www.researchgate.net/publication/390051928" class="text-blue-600">Read Full Text</a></p>
-  </section>
-
-  <!-- Publications Section -->
-  <section id="publications" class="container mx-auto py-16 px-6">
-    <h2 class="text-3xl font-bold mb-6 text-center">Publications</h2>
-    <p class="mb-4">My work spans peer-reviewed journals, conference presentations, and technical reports. <a href="https://scholar.google.com/citations?hl=en&user=4ypH5kAAAAAJ" class="text-blue-600">Google Scholar</a></p>
-
-    <h3 class="text-2xl font-semibold mt-6 mb-2">Peer-Reviewed Papers</h3>
-    <ul class="list-disc ml-6">
-      <li>Integrating StreetLight, EPS Smart Location Data and Road Attributes — <em>Journal of Transportation Engineering, Part A: Systems</em>, 2025.</li>
-      <li>Studying Rutting Performance of Superpave Mixtures — <em>Road Materials and Pavement Design</em>, 2016.</li>
-      <li>Gap Acceptance Behavior at U-Turn Median Openings — <em>Jordan Journal of Civil Engineering</em>, 2013.</li>
-      <li>Solidification/Stabilization of Unwanted Medications Using Asphalt — <em>Journal of Material Cycles and Waste Management</em>, 2013.</li>
-    </ul>
-
-    <h3 class="text-2xl font-semibold mt-6 mb-2">Accepted Papers</h3>
-    <ul class="list-disc ml-6">
-      <li>Better Safety Analyses through Smarter Data — <em>Transportation Research Record</em>, 2025.</li>
-    </ul>
-
-    <h3 class="text-2xl font-semibold mt-6 mb-2">Other Papers & Conferences</h3>
-    <ul class="list-disc ml-6">
-      <li>Consensus-Aware AV Behavior — arXiv preprint, 2025.</li>
-      <li>Accepted presentation at IEEE ITSC 2025, Gold Coast, Australia.</li>
-      <li>Presentation at TRB Annual Meeting 2025, Washington, DC.</li>
-    </ul>
-
-    <h3 class="text-2xl font-semibold mt-6 mb-2">Technical Reports</h3>
-    <p>Modeling Pedestrian and Bicyclist Crash Exposure with LBS Data — Nebraska DOT Technical Report, 2024.</p>
-  </section>
-
-  <!-- Teaching Section -->
-  <section id="teaching" class="container mx-auto py-16 px-6 bg-gray-100">
-    <h2 class="text-3xl font-bold mb-6 text-center">Teaching</h2>
-    <h3 class="text-2xl font-semibold mt-4 mb-2">University of Nebraska-Lincoln</h3>
-    <p>Graduate Teaching Assistant (2024–Present). Supported courses:</p>
-    <ul class="list-disc ml-6">
-      <li><strong>CIVE 202 - Civil Engineering Analysis II:</strong> Python programming, numerical methods, and automation.</li>
-      <li><strong>CIVE 361 - Principles of Transportation Engineering:</strong> Traffic flow theory, geometric design, and demand forecasting.</li>
-    </ul>
-
-    <h3 class="text-2xl font-semibold mt-6 mb-2">Jordan University of Science and Technology</h3>
-    <p>Teaching Assistant (2012–2013). Assisted in labs and grading for Surveying, Highway Materials, and Engineering Statics.</p>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="container mx-auto py-16 px-6">
-    <h2 class="text-3xl font-bold mb-6 text-center">Experience</h2>
-    <p><strong>Graduate Research and Teaching Assistant</strong>, University of Nebraska–Lincoln (2023–Present)</p>
-    <p class="mt-4"><strong>Senior Transportation Engineer</strong>, TrafQuest, Dubai (2019–2023)</p>
-    <p>Led 100+ projects across UAE and MENA region, including transportation master plans, traffic impact studies, and multimodal integration. Managed simulations, feasibility studies, and sustainable transport solutions.</p>
-    <p class="mt-4"><strong>Transportation Engineer</strong>, TrafQuest, Dubai (2013–2019)</p>
-    <p class="mt-4"><strong>Research/Teaching Assistant</strong>, Jordan University of Science and Technology (2011–2013)</p>
-
-    <h3 class="text-2xl font-semibold mt-6 mb-2">Software Competencies</h3>
-    <ul class="list-disc ml-6">
-      <li>Traffic Tools: VISSIM, VISUM, Synchro, SIDRA, HCS</li>
-      <li>GIS: ArcGIS, QGIS, GeoDa</li>
-      <li>Statistics: Python, R, SPSS, SAS</li>
-      <li>Optimization: Julia</li>
-      <li>Machine Learning: Scikit-learn, TensorFlow</li>
-      <li>Other: LaTeX, Quarto</li>
-    </ul>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="container mx-auto py-16 px-6 bg-gray-100">
-    <h2 class="text-3xl font-bold mb-6 text-center">Contact</h2>
-    <p class="text-center"><strong>Office:</strong> WHIT 362E, Prem Paul Research Center, Lincoln, NE 68503</p>
-    <p class="text-center mt-2"><strong>Email:</strong> <a href="mailto:melayan2@huskers.unl.edu" class="text-blue-600">melayan2@huskers.unl.edu</a></p>
-
-    <h3 class="text-2xl font-semibold mt-6 mb-2 text-center">Profiles</h3>
-    <ul class="list-disc mx-auto max-w-md">
-      <li><a href="https://scholar.google.com/citations?hl=en&user=4ypH5kAAAAAJ" class="text-blue-600">Google Scholar</a></li>
-      <li><a href="https://orcid.org/0009-0001-2562-5694" class="text-blue-600">ORCID</a></li>
-      <li><a href="https://www.researchgate.net/profile/Mohammad-Elayan-2" class="text-blue-600">ResearchGate</a></li>
-      <li><a href="https://www.linkedin.com/in/mohammad-elayan-69096662" class="text-blue-600">LinkedIn</a></li>
-    </ul>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-white text-center py-6 mt-8 shadow">
-    <p>&copy; 2025 Mohammad Elayan</p>
-  </footer>
-</body>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-6">
+      <p>&copy; 2025 Mohammad Elayan. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
