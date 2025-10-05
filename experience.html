@@ -50,24 +50,45 @@
 
   <body class="antialiased text-gray-800 bg-white">
 
-    <!-- Header / Navbar -->
-    <header class="bg-white shadow-sm fixed top-0 inset-x-0 z-50">
-      <nav class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
-        <a href="index.html" class="text-2xl font-bold text-gray-900">Mohammad Elayan</a>
-        <ul class="flex space-x-6 text-sm font-medium text-gray-700">
-          <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
-          <li><a href="index.html#about" class="hover:text-blue-600">About</a></li>
-          <li><a href="index.html#research.html" class="hover:text-blue-600">Research</a></li>
-          <li><a href="experience.html" class="text-blue-600 font-semibold">Experience</a></li>
-          <li><a href="index.html#publications.html" class="hover:text-blue-600">Publications</a></li>
-          <li><a href="index.html#news.html" class="hover:text-blue-600">News</a></li>
-          <li><a href="index.html#connect.html" class="hover:text-blue-600">Connect</a></li>
-        </ul>
-      </nav>
-    </header>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-gray-900">Mohammad Elayan</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">About</a>
+                        <a href="#research" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Research</a>
+                        <a href="experience.html" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Experience</a>
+                        <a href="#publications" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Publications</a>
+                        <a href="#news" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">News</a>
+                        <a href="#connect" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Connect</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-blue-600">About</a>
+                <a href="#research" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Research</a>
+                <a href="#publications" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Publications</a>
+                <a href="#news" class="block px-3 py-2 text-gray-700 hover:text-blue-600">News</a>
+                <a href="#connect" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Connect</a>
+            </div>
+        </div>
+    </nav>
 
-    <!-- Offset for fixed nav -->
-    <div class="h-24"></div>
+
 
     <!-- Experience Section -->
     <section id="experience" class="py-20 bg-gray-50 fade-in">
