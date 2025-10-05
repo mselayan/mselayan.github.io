@@ -10,6 +10,42 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fade-in Animation Styles (same as index.html) -->
+    <style>
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 1s ease-out forwards;
+      }
+
+      .stagger-1 {
+        animation-delay: 0.2s;
+      }
+
+      .stagger-2 {
+        animation-delay: 0.4s;
+      }
+
+      .stagger-3 {
+        animation-delay: 0.6s;
+      }
+
+      .stagger-4 {
+        animation-delay: 0.8s;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
   </head>
 
   <body class="antialiased text-gray-800 bg-white">
@@ -33,17 +69,16 @@
     <div class="h-24"></div>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-gray-50">
+    <section id="experience" class="py-20 bg-gray-50 fade-in">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
+        <div class="text-center mb-16 fade-in stagger-1">
           <h2 class="text-4xl font-bold text-gray-900 mb-4">Experience</h2>
           <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
           <!-- UNL -->
-          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow fade-in stagger-1">
             <div class="flex items-center justify-center mb-6">
               <img src="https://ucomm.unl.edu/sites/unl.edu.university-communication/files/styles/no_crop_720/public/media/image/nebraska-n.jpg?itok=4Vj3-oUs" alt="UNL Logo" class="h-16" />
             </div>
@@ -58,7 +93,7 @@
           </div>
 
           <!-- TrafQuest -->
-          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow fade-in stagger-2">
             <div class="flex items-center justify-center mb-6">
               <img src="https://media.licdn.com/dms/image/v2/C510BAQG4IVB3qNbm0Q/company-logo_200_200/company-logo_200_200/0/1630563973053/trafquest_logo?e=2147483647&v=beta&t=6HLNXkBggzQySmf9RtR0pgwmgKySPjoU2dzjJTNqAys" alt="TrafQuest Logo" class="h-16" />
             </div>
@@ -73,7 +108,7 @@
           </div>
 
           <!-- JUST -->
-          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow fade-in stagger-3">
             <div class="flex items-center justify-center mb-6">
               <img src="https://upload.wikimedia.org/wikipedia/en/a/ab/JUST_logo2.png" alt="JUST Logo" class="h-16" />
             </div>
@@ -86,13 +121,12 @@
               My research work focused on data collection, experiments, statistical analyses, and writing technical reports and research articles in areas such as traffic operations optimization, highway material performance, and waste management. As a teaching assistant, I supported courses and labs including Surveying, Highway Materials, and Engineering Statics, contributing to both academic instruction and laboratory supervision.
             </p>
           </div>
-
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white text-gray-600 text-sm text-center py-6 border-t mt-16">
+    <footer class="bg-white text-gray-600 text-sm text-center py-6 border-t mt-16 fade-in stagger-4">
       <p>© 2025 Mohammad Elayan — All Rights Reserved</p>
       <p>
         <a href="mailto:melayan2@unl.edu" class="text-blue-600 hover:underline">melayan2@unl.edu</a> |
