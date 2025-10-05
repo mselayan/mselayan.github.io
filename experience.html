@@ -11,46 +11,27 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Fade-in Animation Styles (same as index.html) -->
+    <!-- Animation -->
     <style>
       .fade-in {
         opacity: 0;
         transform: translateY(20px);
         animation: fadeIn 1s ease-out forwards;
       }
-
-      .stagger-1 {
-        animation-delay: 0.2s;
-      }
-
-      .stagger-2 {
-        animation-delay: 0.4s;
-      }
-
-      .stagger-3 {
-        animation-delay: 0.6s;
-      }
-
-      .stagger-4 {
-        animation-delay: 0.8s;
-      }
+      .stagger-1 { animation-delay: 0.2s; }
+      .stagger-2 { animation-delay: 0.4s; }
+      .stagger-3 { animation-delay: 0.6s; }
+      .stagger-4 { animation-delay: 0.8s; }
 
       @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
       }
     </style>
   </head>
 
   <body class="antialiased text-gray-800 bg-white">
-
-    <!-- Header / Navbar -->
+    <!-- Header -->
     <header class="bg-white shadow-sm fixed top-0 inset-x-0 z-50">
       <nav class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
         <a href="index.html" class="text-2xl font-bold text-gray-900">Mohammad Elayan</a>
@@ -65,60 +46,50 @@
       </nav>
     </header>
 
-    <!-- Offset for fixed nav -->
     <div class="h-24"></div>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-gray-50 fade-in">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16 fade-in stagger-1">
-          <h2 class="text-4xl font-bold text-gray-900 mb-4">Experience</h2>
+    <!-- Experience Timeline -->
+    <section id="timeline" class="py-20 bg-gray-50 fade-in">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Experience Timeline</h2>
           <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="relative border-l border-blue-300 pl-8">
           <!-- UNL -->
-          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow fade-in stagger-1">
-            <div class="flex items-center justify-center mb-6">
-              <img src="https://ucomm.unl.edu/sites/unl.edu.university-communication/files/styles/no_crop_720/public/media/image/nebraska-n.jpg?itok=4Vj3-oUs" alt="UNL Logo" class="h-16" />
+          <div class="mb-12 fade-in stagger-1">
+            <div class="absolute -left-5 flex items-center justify-center w-10 h-10 bg-blue-600 rounded-full">
+              <img src="https://ucomm.unl.edu/sites/unl.edu.university-communication/files/styles/no_crop_720/public/media/image/nebraska-n.jpg?itok=4Vj3-oUs" class="w-6 h-6 rounded-full" alt="UNL Logo">
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">University of Nebraska-Lincoln</h3>
-            <p class="text-teal-600 text-sm text-center">
-              Graduate Research Assistant (2023 – Present)<br />
-              Graduate Teaching Assistant (2024 – Present)
-            </p>
-            <p class="text-gray-600 text-sm mt-3">
-              As part of Dr. Wissam Kontar’s research team at the Civil & Environmental Engineering Department and Nebraska Transportation Center, I focus on advanced research methodologies and technologies to address contemporary challenges in transportation engineering, particularly in automated vehicles. As a teaching assistant, I supported CIVE 202 – Civil Engineering Analysis II, a project-based programming course, and CIVE 361 – Principles of Transportation Engineering, covering highway design, traffic operations, and planning.
+            <h3 class="text-xl font-semibold text-gray-900">University of Nebraska–Lincoln</h3>
+            <p class="text-sm text-teal-600">Graduate Research & Teaching Assistant (2023 – Present)</p>
+            <p class="text-gray-600 text-sm mt-2">
+              Conducting research on automated vehicles and traffic safety under Dr. Wissam Kontar. Supporting undergraduate instruction in transportation and civil analysis courses.
             </p>
           </div>
 
           <!-- TrafQuest -->
-          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow fade-in stagger-2">
-            <div class="flex items-center justify-center mb-6">
-              <img src="https://media.licdn.com/dms/image/v2/C510BAQG4IVB3qNbm0Q/company-logo_200_200/company-logo_200_200/0/1630563973053/trafquest_logo?e=2147483647&v=beta&t=6HLNXkBggzQySmf9RtR0pgwmgKySPjoU2dzjJTNqAys" alt="TrafQuest Logo" class="h-16" />
+          <div class="mb-12 fade-in stagger-2">
+            <div class="absolute -left-5 flex items-center justify-center w-10 h-10 bg-blue-600 rounded-full">
+              <img src="https://media.licdn.com/dms/image/v2/C510BAQG4IVB3qNbm0Q/company-logo_200_200/company-logo_200_200/0/1630563973053/trafquest_logo?e=2147483647&v=beta&t=6HLNXkBggzQySmf9RtR0pgwmgKySPjoU2dzjJTNqAys" class="w-6 h-6 rounded-full" alt="TrafQuest Logo">
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">TrafQuest</h3>
-            <p class="text-teal-600 text-sm text-center">
-              Senior Transportation Engineer (2019 – 2023)<br />
-              Transportation Engineer (2013 – 2019)
-            </p>
-            <p class="text-gray-600 text-sm mt-3">
-              At TrafQuest, I led over 100 projects across the UAE and MENA region, including transportation master plans, traffic impact studies, and multimodal integration initiatives. My work involved forecasting demand, analyzing traffic operations, evaluating multimodal connectivity, simulating conditions with advanced tools, and preparing technical reports. I managed projects spanning master plans, traffic impact studies, freight transport, parking, and evacuation planning. I was project manager for most of these efforts, ensuring sustainability and feasibility in all delivered solutions.
+            <h3 class="text-xl font-semibold text-gray-900">TrafQuest</h3>
+            <p class="text-sm text-teal-600">Senior Transportation Engineer (2019 – 2023)<br>Transportation Engineer (2013 – 2019)</p>
+            <p class="text-gray-600 text-sm mt-2">
+              Managed transportation master plans and impact studies across the UAE and MENA region, integrating multimodal strategies and leading over 100 projects as project manager.
             </p>
           </div>
 
           <!-- JUST -->
-          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow fade-in stagger-3">
-            <div class="flex items-center justify-center mb-6">
-              <img src="https://upload.wikimedia.org/wikipedia/en/a/ab/JUST_logo2.png" alt="JUST Logo" class="h-16" />
+          <div class="fade-in stagger-3">
+            <div class="absolute -left-5 flex items-center justify-center w-10 h-10 bg-blue-600 rounded-full">
+              <img src="https://upload.wikimedia.org/wikipedia/en/a/ab/JUST_logo2.png" class="w-6 h-6 rounded-full" alt="JUST Logo">
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">Jordan Univ. of Science & Tech.</h3>
-            <p class="text-teal-600 text-sm text-center">
-              Graduate Research Assistant (2011 - 2013)<br />
-              Graduate Teaching Assistant (2012 – 2013)
-            </p>
-            <p class="text-gray-600 text-sm mt-3">
-              My research work focused on data collection, experiments, statistical analyses, and writing technical reports and research articles in areas such as traffic operations optimization, highway material performance, and waste management. As a teaching assistant, I supported courses and labs including Surveying, Highway Materials, and Engineering Statics, contributing to both academic instruction and laboratory supervision.
+            <h3 class="text-xl font-semibold text-gray-900">Jordan Univ. of Science & Technology</h3>
+            <p class="text-sm text-teal-600">Graduate Research & Teaching Assistant (2011 – 2013)</p>
+            <p class="text-gray-600 text-sm mt-2">
+              Worked on highway materials, traffic operations, and waste management research. Supported lab instruction in surveying, materials, and statics courses.
             </p>
           </div>
         </div>
@@ -134,6 +105,5 @@
         <a href="https://scholar.google.com/" class="text-blue-600 hover:underline">Google Scholar</a>
       </p>
     </footer>
-
   </body>
 </html>
