@@ -34,38 +34,15 @@
 
     <!-- Fade-in Animation Styles (same as index.html) -->
     <style>
-      .fade-in {
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeIn 1s ease-out forwards;
-      }
-
-      .stagger-1 {
-        animation-delay: 0.2s;
-      }
-
-      .stagger-2 {
-        animation-delay: 0.4s;
-      }
-
-      .stagger-3 {
-        animation-delay: 0.6s;
-      }
-
-      .stagger-4 {
-        animation-delay: 0.8s;
-      }
-
-      @keyframes fadeIn {
-        from {
+        .fade-in {
           opacity: 0;
-          transform: translateY(20px);
+          transform: translateY(30px);
+          transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
-        to {
+        .fade-in.visible {
           opacity: 1;
           transform: translateY(0);
         }
-      }
     </style>
   </head>
 
@@ -383,6 +360,23 @@
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(card);
         });
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const faders = document.querySelectorAll(".fade-in");
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              obs.unobserve(entry.target); // fade once; remove this line if you want it to retrigger
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      faders.forEach(el => observer.observe(el));
+    });
     </script>
     
   </body>
