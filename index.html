@@ -222,38 +222,38 @@
                                 <i class="fas fa-file text-yellow-600"></i>
                             </div>
                         </div>
-                
+    
                         <div class="flex-1">
                             <div class="flex items-center mb-2">
                                 <span class="text-sm text-yellow-600 font-medium">November 2025</span>
                             </div>
-                
+    
                             <h3 class="text-xl font-semibold text-gray-900 mb-3">
                                 Consensus Paper Presented at IEEE ITSC 2025
                             </h3>
-                
+    
                             <p class="text-gray-600 mb-4">
                                 We presented our paper <i>“Consensus-Aware AV Behavior: Trade-offs Between Safety,
-                                Interaction, and Performance in Mixed Urban Traffic”</i> at IEEE ITSC 2025 in Gold
-                                Coast, Australia. This work is the first installment in an ongoing research line aimed at building a
-                                data-driven pathway for automated vehicles to understand real-world trade-offs,
+                                Interaction, and Performance in Mixed Urban Traffic”</i> at IEEE ITSC 2025 in Gold Coast,
+                                Australia. This work is the first installment in an ongoing research line aimed at building
+                                a data-driven pathway for automated vehicles to understand real-world trade-offs,
                                 learn the multi-objective space, and ultimately reshape how autonomous vehicles
                                 are designed.
                             </p>
-                
+    
                             <div class="flex flex-wrap gap-4">
                                 <a href="https://lnkd.in/dX5MUu3y" target="_blank"
                                    class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
                                     <i class="fas fa-file mr-2"></i>
                                     Conference Paper
                                 </a>
-                
+    
                                 <a href="https://lnkd.in/gFCBKj_E" target="_blank"
                                    class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
                                     <i class="fas fa-code mr-2"></i>
                                     Code (Fully Reproducible)
                                 </a>
-                
+    
                                 <a href="https://lnkd.in/gKmSwjpf" target="_blank"
                                    class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
                                     <i class="fas fa-file-alt mr-2"></i>
@@ -298,7 +298,7 @@
                     </div>
                 </div>
     
-                <!-- News Item 3 -->
+                <!-- News Item 3 (fixed) -->
                 <div class="bg-gray-50 p-8 rounded-xl card-hover">
                     <div class="flex items-start space-x-4">
                         <div class="flex-shrink-0">
@@ -317,12 +317,16 @@
                             </h3>
     
                             <p class="text-gray-600 mb-4">
-                                Our paper, "Better Safety Analyses through Smarter Data..." has been accepted.
+                                Our paper, <i>“Better Safety Analyses through Smarter Data: Adding Open-Street-View and
+                                Traffic-Calibrated LBS Data to Pedestrian Crash Analysis in Lincoln, NE”</i>, has been
+                                accepted for publication in the Transportation Research Record.
                             </p>
     
-                            <a href="#" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                            <a href="https://www.researchgate.net/publication/382926999_Better_Safety_Analyses_through_Smarter_Data_Adding_Open-Street-View_and_Traffic_Calibrated-LBS_Data_to_Pedestrian_Crash_Analysis_in_Lincoln_NE"
+                               target="_blank"
+                               class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
                                 <i class="fas fa-external-link-alt mr-2"></i>
-                                Read More
+                                Read on ResearchGate
                             </a>
                         </div>
                     </div>
@@ -417,6 +421,22 @@
             </div>
         </div>
     </section>
+    
+    <!-- Script must be OUTSIDE the section -->
+    <script>
+    document.getElementById("showMoreBtn").addEventListener("click", function () {
+        const moreNews = document.getElementById("more-news");
+    
+        if (moreNews.classList.contains("hidden")) {
+            moreNews.classList.remove("hidden");
+            this.textContent = "Show Less";
+        } else {
+            moreNews.classList.add("hidden");
+            this.textContent = "Show More News";
+        }
+    });
+    </script>
+
 
     
     
