@@ -86,59 +86,62 @@
     
     <!-- Current Focus -->  
     <section id="current-focus" class="py-20 bg-white fade-in">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-              <h2 class="text-4xl font-bold text-gray-900 mb-4">Current Focus</h2>
-              <div class="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
-              <h3 class="text-2xl font-semibold text-black-600 mb-6">Mapping Behavioral Consensus & the Empirical Pareto Frontier</h3>
-              <p class="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">
-                Our current research bridges the gap between empirical traffic behavior and autonomous vehicle (AV) policy. By analyzing thousands of high-resolution trajectories, we are developing a framework to quantify <strong>behavioral consensus</strong> and serve as the foundation for training autonomous agents to navigate the trade-offs in the multi-objective space.
-              </p>
-    
-              <div class="flex flex-wrap justify-center gap-6 mt-8">
-                <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5601917" target="_blank"
-                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-                  <i class="fas fa-file mr-2"></i>
-                  Paper
-                </a>
-                <a href="https://github.com/wissamkontar/Consensus-AV-Analysis" target="_blank"
-                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-                  <i class="fas fa-code mr-2"></i>
-                  Code (Fully Reproducible)
-                </a>
-              </div>
-            </div>
-            
-            <div class="mt-12 flex justify-center">
-              <div class="relative max-w-5xl w-full">
-                <img src="images/Consensus_Paper_Abstract_HR.gif" alt="Graphical Abstract: Empirical Pareto Frontier" class="rounded-2xl shadow-2xl border border-gray-100">
-              </div>
-            </div>
-          </div>
-
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-              <h3 class="text-2xl font-semibold text-black-600 mb-6">A Modular, Simulation-Ready Learning Framework</h3>
-              
-              <p class="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">
-                Building on the consensus baseline, we synthesized a framework that executes trade-off derivation on a timestep basis. By utilizing only current and previous states with no access to future data, the model is simulation-ready and avoids the look-ahead bias of passive datasets. This minimally invasive, modular approach generalizes across trajectory sets to construct Pareto learning surfaces and eventually guide adaptive control policies.
-              </p>
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Current Focus</h2>
+          <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+        </div>
     
-              <div class="flex justify-center mt-8">
-                <a href="https://github.com/wissamkontar/Learning-the-Pareto-Space-of-Multi-Objective-Autonomous-Driving" target="_blank"
-                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-                  <i class="fas fa-code mr-2"></i>
-                  Code (Fully Reproducible)
-                </a>
-              </div>
-            </div>
+        <div class="mb-24">
+          <div class="text-center mb-12">
+            <h3 class="text-2xl font-semibold text-black-600 mb-6">Mapping Behavioral Consensus & the Empirical Pareto Frontier</h3>
+            <p class="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">
+              Our current research bridges the gap between empirical traffic behavior and autonomous vehicle (AV) policy. By analyzing thousands of high-resolution trajectories, we are developing a framework to quantify <strong>behavioral consensus</strong> and serve as the foundation for training autonomous agents to navigate the trade-offs in the multi-objective space.
+            </p>
     
-            <div class="mt-12 flex justify-center">
-              <div class="relative max-w-5xl w-full">
-                <img src="images/Flow_Learning.png" alt="Framework Flow: Learning the Pareto Space" class="rounded-2xl shadow-2xl border border-gray-100">
-              </div>
+            <div class="flex flex-wrap justify-center gap-6 mt-8">
+              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5601917" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                <i class="fas fa-file mr-2"></i> Paper
+              </a>
+              <a href="https://github.com/wissamkontar/Consensus-AV-Analysis" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                <i class="fas fa-code mr-2"></i> Code (Fully Reproducible)
+              </a>
             </div>
           </div>
-        </section> 
+    
+          <div class="flex justify-center">
+            <div class="relative max-w-5xl w-full">
+              <img src="images/Consensus_Paper_Abstract_HR.gif" alt="Graphical Abstract: Empirical Pareto Frontier" class="rounded-2xl shadow-2xl border border-gray-100">
+            </div>
+          </div>
+        </div>
+    
+        <hr class="border-gray-100 mb-24">
+    
+        <div>
+          <div class="text-center mb-12">
+            <h3 class="text-2xl font-semibold text-black-600 mb-6">A Modular, Simulation-Ready Learning Framework</h3>
+            <p class="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">
+              Building on the consensus baseline, we synthesized a framework that executes trade-off derivation on a <strong>timestep basis</strong>. By utilizing only current and previous states with <strong>no access to future data</strong>, the model is simulation-ready and avoids the look-ahead bias of passive datasets. This minimally invasive approach generalizes across trajectory sets to guide adaptive control policies.
+            </p>
+    
+            <div class="flex justify-center mt-8">
+              <a href="https://github.com/wissamkontar/Learning-the-Pareto-Space-of-Multi-Objective-Autonomous-Driving" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                <i class="fas fa-code mr-2"></i> Code (Fully Reproducible)
+              </a>
+            </div>
+          </div>
+    
+          <div class="flex justify-center">
+            <div class="relative max-w-5xl w-full">
+              <img src="images/Flow_Learning.png" alt="Framework Flow: Learning the Pareto Space" class="rounded-2xl shadow-2xl border border-gray-100">
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </section>
 
       
     <!-- Research Areas -->
