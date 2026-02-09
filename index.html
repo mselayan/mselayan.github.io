@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO and author metadata -->
+    <meta name="keywords" content="Mohammad Elayan, transportation research, transportation engineering, automated vehicles, traffic safety, machine learning, UNL, civil engineering, Nebraska">
+    <meta name="author" content="Mohammad Elayan">
+    <link rel="canonical" href="https://mselayan.github.io/">
+        
+    <title>Mohammad Elayan's Website</title>
+    <meta name="description" content="PhD student in Civil Engineering at University of Nebraska–Lincoln, specializing in automated vehicle behavior and traffic safety analysis using AI and machine learning.">
+       
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mohammad Elayan - PhD Student & Transportation Researcher">
+    <meta property="og:description" content="I'm a PhD student in Civil Engineering at the University of Nebraska–Lincoln, with a decade of experience in transportation planning and traffic engineering, including leading roles in Dubai, UAE. My current research focuses on automated vehicle behavior and data-driven safety analysis using machine learning and artificial intelligence. I also serve as a teaching assistant and contribute to collaborative projects in AV-human interaction, traffic safety, simulation and traffic calibration.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mselayan.github.io">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mohammad Elayan - PhD Student & Transportation Researcher">
+    <meta name="twitter:description" content="I'm a PhD student in Civil Engineering at the University of Nebraska–Lincoln, with a decade of experience in transportation planning and traffic engineering, including leading roles in Dubai, UAE. My current research focuses on automated vehicle behavior and data-driven safety analysis using machine learning and artificial intelligence. I also serve as a teaching assistant and contribute to collaborative projects in AV-human interaction, traffic safety, simulation and traffic calibration.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+      body { 
+        font-family: 'Inter', sans-serif; 
+        font-size: 17px;
+        line-height: 1.7;
+      }
+    
+      .gradient-bg {
+        background: linear-gradient(-45deg, #3730a3, #1e40af, #065f46, #047857);
+        background-size: 400% 400%;
+        animation: gradientShift 15s ease infinite;
+        position: relative;
+      }
+      
+      .gradient-bg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        opacity: 0.4;
+      }
+    
+      @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+    
+      .card-hover { 
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid rgba(0,0,0,0.06);
+      }
+      
+      .card-hover:hover { 
+        transform: translateY(-8px); 
+        box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        border-color: rgba(0,0,0,0.1);
+      }
+      
+      .fade-in { 
+        opacity: 0; 
+        transform: translateY(30px); 
+        animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards; 
+      }
+      
+      @keyframes fadeIn { 
+        to { opacity: 1; transform: translateY(0); } 
+      }
+      
+      .stagger-1 { animation-delay: 0.15s; }
+      .stagger-2 { animation-delay: 0.3s; }
+      .stagger-3 { animation-delay: 0.45s; }
+      .stagger-4 { animation-delay: 0.6s; }
+      
+      .nav-link { 
+        position: relative;
+        transition: color 0.3s ease;
+      }
+      
+      .nav-link::after { 
+        content: ''; 
+        position: absolute; 
+        width: 0; 
+        height: 2px; 
+        bottom: -4px; 
+        left: 50%; 
+        background: linear-gradient(90deg, #667eea, #764ba2);
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+      
+      .nav-link:hover::after { width: 100%; }
+      
+      .profile-image { 
+        box-shadow: 0 25px 50px rgba(67, 56, 202, 0.25);
+        border: 4px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.4s ease;
+      }
+      
+      .profile-image:hover {
+        transform: scale(1.02);
+        box-shadow: 0 30px 60px rgba(67, 56, 202, 0.3);
+      }
+      
+      .section-title {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .section-divider {
+        height: 3px;
+        background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+        margin: 0 auto;
+      }
+      
+      .expertise-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 160px;
+      }
+      
+      .news-icon-wrapper {
+        transition: all 0.3s ease;
+      }
+      
+      .card-hover:hover .news-icon-wrapper {
+        transform: scale(1.1);
+      }
+      
+      .btn-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        transition: all 0.3s ease;
+      }
+      
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+      }
+      
+      .nav-scrolled {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+      
+      @media (max-width: 768px) {
+        body { font-size: 16px; }
+        .profile-image { width: 280px; height: 280px; }
+      }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    
+    <!-- Navigation -->
+    <nav id="main-nav" class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-gray-900">Mohammad Elayan</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">About</a>
+                        <a href="research.html" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Research</a>
+                        <a href="experience.html" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Experience</a>
+                        <a href="#news" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">News</a>
+                        <a href="#connect" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Connect</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-600 focus:outline-none transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">About</a>
+                <a href="research.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Research</a>
+                <a href="experience.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Experience</a>
+                <a href="#news" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">News</a>
+                <a href="#connect" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Connect</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center pt-16 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="text-white">
+                    <h1 class="text-5xl lg:text-6xl font-bold mb-6 fade-in leading-tight">
+                        Mohammad <span class="text-yellow-300">Elayan</span>
+                    </h1>
+                    <p class="text-xl lg:text-2xl mb-8 text-blue-100 fade-in stagger-1 font-medium">
+                        PhD Student & Transportation Researcher
+                    </p>
+                    <p class="text-lg mb-10 text-blue-50 leading-relaxed fade-in stagger-2">
+                        I am a PhD student in Civil Engineering at the University of Nebraska–Lincoln, with a decade of experience in transportation planning and traffic engineering, including leading roles in Dubai, UAE. My current research focuses on automated vehicle behavior and data-driven safety analysis using machine learning and artificial intelligence. I also serve as a teaching assistant and contribute to collaborative projects in AV-human interaction, traffic safety, simulation and traffic calibration.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 fade-in stagger-3">
+                        <a href="https://mselayan.github.io/Elayan_CV.pdf" target="_blank" class="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl">
+                            <i class="fas fa-download mr-2"></i>
+                            Download CV
+                        </a>
+                        <a href="#connect" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all">
+                            <i class="fas fa-envelope mr-2"></i>
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center lg:justify-end fade-in stagger-4">
+                    <img src="https://mselayan.github.io/images/DP7.png" alt="Mohammad Elayan" class="w-80 h-80 lg:w-96 lg:h-96 rounded-full object-cover profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 section-title">About Me</h2>
+                <div class="w-32 h-1 section-divider mt-6"></div>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Brief Background</h3>
+                    <div class="space-y-6 text-gray-600">
+                        <p>
+                            I am a PhD student in Civil Engineering at the University of Nebraska–Lincoln, where my research focuses on the empirical and simulation-based analysis of automated vehicles behavior. My work seeks to refine AV driving and interactions in diverse traffic conditions, drawing on methods that stretch from trial-and-error to artificial intelligence.
+                        </p>
+                        <p>
+                            Before starting my doctorate, I spent nearly a decade in Dubai, UAE, where I grew into a Senior Transportation Engineer role and led more than 100 transportation projects across the MENA region. These included transportation master plans, traffic impact studies, and multimodal integration projects for major developments and city-scale planning efforts. My role also involved producing traffic simulations, conducting feasibility and sustainability reviews, and developing demand forecasting models.
+                        </p>
+                        <p>
+                            Academically, I hold both a Master's and Bachelor's degree in Civil Engineering (Transportation) from the Jordan University of Science and Technology.
+                        </p>
+                        <p>
+                            In my current role as a Graduate Research Assistant, I explore the intersection of automated mobility, data-driven planning, and traffic safety, with particular interest in methods that combine spatiotemporal data, simulation tools, and machine learning and artificial intelligence frameworks to support more intelligent and adaptive transportation systems.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-5">
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl text-center card-hover expertise-card">
+                        <i class="fas fa-graduation-cap text-4xl text-blue-600 mb-4"></i>
+                        <h4 class="font-semibold text-gray-900 mb-2">Civil Engineering</h4>
+                        <p class="text-gray-600 text-sm">Transportation Engineering</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl text-center card-hover expertise-card">
+                        <i class="fas fa-car text-4xl text-green-600 mb-4"></i>
+                        <h4 class="font-semibold text-gray-900 mb-2">AV Research</h4>
+                        <p class="text-gray-600 text-sm">Empirical & Simulation Analysis</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 rounded-xl text-center card-hover expertise-card">
+                        <i class="fas fa-brain text-4xl text-yellow-600 mb-4"></i>
+                        <h4 class="font-semibold text-gray-900 mb-2">AI</h4>
+                        <p class="text-gray-600 text-sm">Adaptive AV Systems</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-xl text-center card-hover expertise-card">
+                        <i class="fas fa-robot text-4xl text-red-600 mb-4"></i>
+                        <h4 class="font-semibold text-gray-900 mb-2">Machine Learning</h4>
+                        <p class="text-gray-600 text-sm">Forecasting & Prediction</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl text-center card-hover expertise-card">
+                        <i class="fas fa-shield text-4xl text-gray-600 mb-4"></i>
+                        <h4 class="font-semibold text-gray-900 mb-2">Safety Research</h4>
+                        <p class="text-gray-600 text-sm">Crash Modeling & Risk Metrics</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-teal-50 to-teal-100 p-6 rounded-xl text-center card-hover expertise-card">
+                        <i class="fas fa-cogs text-4xl text-teal-600 mb-4"></i>
+                        <h4 class="font-semibold text-gray-900 mb-2">Optimization</h4>
+                        <p class="text-gray-600 text-sm">Trade-off Navigation</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl text-center card-hover expertise-card">
+                        <i class="fas fa-globe text-4xl text-purple-600 mb-4"></i>
+                        <h4 class="font-semibold text-gray-900 mb-2">GIS</h4>
+                        <p class="text-gray-600 text-sm">Spatial Processing & Analysis</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl text-center card-hover expertise-card">
+                        <i class="fas fa-database text-4xl text-orange-600 mb-4"></i>
+                        <h4 class="font-semibold text-gray-900 mb-2">Smart Data</h4>
+                        <p class="text-gray-600 text-sm">Calibration & Transportation Application</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Latest News -->
+    <section id="news" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 section-title">Latest News</h2>
+                <div class="w-32 h-1 section-divider mt-6"></div>
+            </div>
+    
+            <div class="space-y-6">
+
+                <!-- News Item 8 -->
+                <div class="bg-white p-8 rounded-xl card-hover">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center news-icon-wrapper">
+                                <i class="fas fa-bullhorn text-blue-600 text-xl"></i>
+                            </div>
+                        </div>
+
+                        <div class="flex-1">
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm text-blue-600 font-semibold bg-blue-50 px-3 py-1 rounded-full">January 15, 2026</span>
+                            </div>
+
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                                Paper Accepted at IEEE IV 2026
+                            </h3>
+
+                            <p class="text-gray-600 mb-3">
+                                Our paper <i>"Learning the Pareto Space of Multi-Objective Autonomous Driving: A Modular, Data-Driven Approach"</i> has been accepted for presentation at <b>IEEE IV 2026</b> in Detroit! 
+                            </p>
+                            
+                            <p class="text-gray-600 mb-5">
+                                This work marks the first installment of Phase II of our research. By utilizing a timestep-based derivation with no access to future data, this modular framework provides a foundation for advancing consensus-aware driving through data-driven Pareto trade-offs.
+                            </p>
+
+                            <div class="flex flex-wrap gap-3">
+                                <a href="https://github.com/wissamkontar/Learning-the-Pareto-Space-of-Multi-Objective-Autonomous-Driving" target="_blank"
+                                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg transition-colors">
+                                    <i class="fas fa-code mr-2"></i>
+                                    Reproducible Code
+                                </a>
+
+                                <a href="https://doi.org/10.48550/arXiv.2601.18913" target="_blank"
+                                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg transition-colors">
+                                    <i class="fas fa-file-alt mr-2"></i>
+                                    Preprint on ArXiv
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- News Item 7 -->
+                <div class="bg-white p-8 rounded-xl card-hover">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center news-icon-wrapper">
+                                <i class="fas fa-file text-gray-600 text-xl"></i>
+                            </div>
+                        </div>
+    
+                        <div class="flex-1">
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm text-gray-600 font-semibold bg-gray-100 px-3 py-1 rounded-full">November 24, 2025</span>
+                            </div>
+    
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                                Streetview Paper is Online
+                            </h3>
+    
+                            <p class="text-gray-600 mb-5">
+                                Our paper <i>"Better Safety Analyses through Smarter Data: Adding Open-Street-View and Traffic-Calibrated 
+                                Location-Based Services Data to Pedestrian Crash Analysis in Lincoln, NE"</i> is officially published in 
+                                the Transportation Research Record: Journal of the Transportation Research Board.
+                            </p>
+    
+                            <div class="flex flex-wrap gap-3">
+                                <a href="https://doi.org/10.1177/03611981251391714" target="_blank"
+                                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg transition-colors">
+                                    <i class="fas fa-file mr-2"></i>
+                                    Paper
+                                </a>
+    
+                                <a href="https://www.researchgate.net/publication/382926999_Better_Safety_Analyses_through_Smarter_Data_Adding_Open-Street-View_and_Traffic-Calibrated_LBS_Data_to_Pedestrian_Crash_Analysis_in_Lincoln_NE" target="_blank"
+                                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg transition-colors">
+                                    <i class="fas fa-file-alt mr-2"></i>
+                                    Preprint on RG
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- News Item 6 -->
+                <div class="bg-white p-8 rounded-xl card-hover">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-14 h-14 bg-yellow-100 rounded-xl flex items-center justify-center news-icon-wrapper">
+                                <i class="fas fa-file text-yellow-600 text-xl"></i>
+                            </div>
+                        </div>
+    
+                        <div class="flex-1">
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm text-yellow-600 font-semibold bg-yellow-50 px-3 py-1 rounded-full">November 19, 2025</span>
+                            </div>
+    
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                                Consensus Paper Presented at IEEE ITSC 2025
+                            </h3>
+    
+                            <p class="text-gray-600 mb-3">
+                                We presented our paper <i>"Consensus-Aware AV Behavior: Trade-offs Between Safety,
+                                Interaction, and Performance in Mixed Urban Traffic"</i> at IEEE ITSC 2025 in Gold Coast,
+                                Australia. This work is the first installment in an ongoing research line aimed at building
+                                a data-driven pathway for automated vehicles to understand real-world trade-offs,
+                                learn the multi-objective space, and ultimately reshape how autonomous vehicles
+                                are designed.
+                            </p>
+    
+                            <div class="flex flex-wrap gap-3">
+                                <a href="https://arxiv.org/abs/2505.04379" target="_blank"
+                                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg transition-colors">
+                                    <i class="fas fa-file mr-2"></i>
+                                    Conference Paper
+                                </a>
+    
+                                <a href="https://github.com/wissamkontar/Consensus-AV-Analysis" target="_blank"
+                                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg transition-colors">
+                                    <i class="fas fa-code mr-2"></i>
+                                    Code (Fully Reproducible)
+                                </a>
+    
+                                <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5601917" target="_blank"
+                                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg transition-colors">
+                                    <i class="fas fa-file-alt mr-2"></i>
+                                    Full Paper + Pareto Surface
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- News Item 5 -->
+                <div class="bg-white p-8 rounded-xl card-hover">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center news-icon-wrapper">
+                                <i class="fas fa-newspaper text-teal-600 text-xl"></i>
+                            </div>
+                        </div>
+                
+                        <div class="flex-1">
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm text-teal-600 font-semibold bg-teal-50 px-3 py-1 rounded-full">October 15, 2025</span>
+                            </div>
+                
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                                Preprint Now Available: The Empirical Pareto Frontier of Automated Driving
+                            </h3>
+                
+                            <p class="text-gray-600 mb-3">
+                                The first phase of our work on AV behavioral consensus design is now online:
+                                <i>"The Empirical Pareto Frontier of Automated Driving: Consensus Across Safety,
+                                Interaction, and Traffic."</i>
+                            </p>
+                
+                            <p class="text-gray-600 mb-5">
+                                This study analyzes how automated vehicles (AVs) balance safety, interaction quality,
+                                and traffic performance using high-resolution TGSIM trajectory data from varied urban
+                                settings. Results show limited consensus across these dimensions, and an empirical
+                                Pareto frontier quantifies potential improvements and guides prescriptive AV control design.
+                            </p>
+                
+                            <div class="flex flex-wrap gap-3">
+                                <a href="https://dx.doi.org/10.2139/ssrn.5601917" target="_blank"
+                                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg transition-colors">
+                                    <i class="fas fa-file mr-2"></i>
+                                    Paper on SSRN
+                                </a>
+                
+                                <a href="https://github.com/wissamkontar/Consensus-AV-Analysis" target="_blank"
+                                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg transition-colors">
+                                    <i class="fas fa-code mr-2"></i>
+                                    Code + Data
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Show More Button -->
+                <div class="text-center mt-8">
+                    <button id="showMoreBtn"
+                        class="px-8 py-3 btn-primary text-white font-semibold rounded-lg shadow-lg">
+                        Show More News
+                    </button>
+                </div>
+    
+                <!-- Hidden News Items -->
+                <div id="more-news" class="hidden space-y-6 mt-6">
+
+                    <!-- News Item 4 -->
+                    <div class="bg-white p-8 rounded-xl card-hover">
+                        <div class="flex items-start space-x-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center news-icon-wrapper">
+                                    <i class="fas fa-bullhorn text-red-600 text-xl"></i>
+                                </div>
+                            </div>
+        
+                            <div class="flex-1">
+                                <div class="flex items-center mb-3">
+                                    <span class="text-sm text-red-600 font-semibold bg-red-50 px-3 py-1 rounded-full">October 14, 2025</span>
+                                </div>
+        
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Papers Accepted at TRBAM 2026</h3>
+        
+                                <p class="text-gray-600 mb-4">
+                                    Two of our papers have been accepted for presentation at the 2026 TRB Annual Meeting:
+                                </p>
+        
+                                <ul class="list-none space-y-3 text-gray-700">
+                                    <li class="flex items-start">
+                                        <i class="fa-solid fa-file-lines text-red-600 mr-3 mt-1"></i>
+                                        <span>A Unified Framework for Consensus-Aware AV Behavior (first author)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa-solid fa-file-lines text-red-600 mr-3 mt-1"></i>
+                                        <span>Multi-Stage Clustering of Daily Human Activities (co-author)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- News Item 3 -->
+                    <div class="bg-white p-8 rounded-xl card-hover">
+                        <div class="flex items-start space-x-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center news-icon-wrapper">
+                                    <i class="fas fa-newspaper text-blue-600 text-xl"></i>
+                                </div>
+                            </div>
+                    
+                            <div class="flex-1">
+                                <div class="flex items-center mb-3">
+                                    <span class="text-sm text-blue-600 font-semibold bg-blue-50 px-3 py-1 rounded-full">September 5, 2025</span>
+                                </div>
+                    
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                                    Paper Accepted for Publication in Transportation Research Record (TRR)
+                                </h3>
+                    
+                                <p class="text-gray-600 mb-3">
+                                    Our paper, "Better Safety Analyses through Smarter Data: Adding Open-Street-View and
+                                    Traffic-Calibrated LBS Data to Pedestrian Crash Analysis in Lincoln, NE", has just been
+                                    accepted in the Transportation Research Record (TRR).
+                                </p>
+                    
+                                <p class="text-gray-600 mb-5">
+                                    Using a granular grid approach, we integrated StreetLight-calibrated traffic volumes
+                                    with Mapillary street-view features to model both crash counts and crash severity.
+                                </p>
+                    
+                                <a href="https://www.researchgate.net/publication/382926999_Better_Safety_Analyses_through_Smarter_Data_Adding_Open-Street-View_and_Traffic_Calibrated-LBS_Data_to_Pedestrian_Crash_Analysis_in_Lincoln_NE"
+                                   target="_blank"
+                                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg transition-colors">
+                                    <i class="fas fa-external-link-alt mr-2"></i>
+                                    Read on ResearchGate
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- News Item 2 -->
+                    <div class="bg-white p-8 rounded-xl card-hover">
+                        <div class="flex items-start space-x-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center news-icon-wrapper">
+                                    <i class="fas fa-trophy text-green-600 text-xl"></i>
+                                </div>
+                            </div>
+                    
+                            <div class="flex-1">
+                                <div class="flex items-center mb-3">
+                                    <span class="text-sm text-green-600 font-semibold bg-green-50 px-3 py-1 rounded-full">July 1, 2025</span>
+                                </div>
+                    
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                                    Paper Accepted at IEEE ITSC 2025
+                                </h3>
+                    
+                                <p class="text-gray-600 mb-5">
+                                    Our paper titled "Consensus-Aware AV Behavior: Trade-offs Between Safety, Interaction, and
+                                    Performance in Mixed Urban Traffic" has been accepted for publication and presentation at the
+                                    2025 IEEE International Conference on Intelligent Transportation Systems (ITSC 2025) in
+                                    Gold Coast, Australia, November 18–21, 2025.
+                                </p>
+                    
+                                <div class="flex flex-wrap gap-3">
+                                    <a href="https://arxiv.org/abs/2505.04379" target="_blank"
+                                       class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg transition-colors">
+                                        <i class="fas fa-file mr-2"></i>
+                                        Paper
+                                    </a>
+                    
+                                    <a href="https://github.com/wissamkontar/Consensus-AV-Analysis" target="_blank"
+                                       class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg transition-colors">
+                                        <i class="fas fa-code mr-2"></i>
+                                        Code + Data
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- News Item 1 -->
+                    <div class="bg-white p-8 rounded-xl card-hover">
+                        <div class="flex items-start space-x-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center news-icon-wrapper">
+                                    <i class="fas fa-book-open text-purple-600 text-xl"></i>
+                                </div>
+                            </div>
+                    
+                            <div class="flex-1">
+                                <div class="flex items-center mb-3">
+                                    <span class="text-sm text-purple-600 font-semibold bg-purple-50 px-3 py-1 rounded-full">June 12, 2025</span>
+                                </div>
+                    
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                                    Paper Published in ASCE Library
+                                </h3>
+                    
+                                <p class="text-gray-600 mb-5">
+                                    Our paper titled "Integrating StreetLight Data, EPS Smart Location Data, and Road Attributes:
+                                    A Random Forest Approach to Multimodal Traffic Calibration in Lincoln, Nebraska" is now online!
+                                </p>
+                    
+                                <div class="flex flex-wrap gap-3">
+                                    <a href="https://ascelibrary.org/doi/10.1061/JTEPBS.TEENG-8949" target="_blank"
+                                       class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg transition-colors">
+                                        <i class="fas fa-external-link-alt mr-2"></i>
+                                        ASCE Library
+                                    </a>
+                    
+                                    <a href="https://www.researchgate.net/publication/390051928_Integrating_StreetLight_EPS_Smart_Location_Data_and_Road_Attributes_A_Random_Forest_Approach_to_Multi-Modal_Traffic_Calibration_in_Lincoln_Nebraska"
+                                       target="_blank"
+                                       class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg transition-colors">
+                                        <i class="fas fa-file-pdf mr-2"></i>
+                                        ResearchGate
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Connect -->
+    <section id="connect" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 section-title">Get in Touch</h2>
+                <div class="w-32 h-1 section-divider mt-6"></div>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h3>
+                    <div class="space-y-5">
+                        <div class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <i class="fas fa-envelope text-blue-600 text-2xl w-10"></i>
+                            <a href="mailto:melayan2@nebraska.edu" class="text-gray-600 hover:text-blue-600 ml-4 font-medium">
+                                melayan2@nebraska.edu
+                            </a>
+                        </div>
+                        <div class="flex items-start p-4 bg-gray-50 rounded-lg">
+                            <i class="fas fa-map-marker-alt text-blue-600 text-2xl w-10 mt-1"></i>
+                            <div class="text-gray-600 ml-4">
+                                <strong>WHIT 362E</strong><br>
+                                Prem Paul Research Center at Whittier School<br>
+                                Lincoln, Nebraska, ZIP 68503
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6 mt-10">Academic Profiles</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://scholar.google.com/citations?hl=en&user=4ypH5kAAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" class="inline-flex items-center px-5 py-3 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition-all font-medium">
+                            <i class="fas fa-graduation-cap mr-2"></i>
+                            Google Scholar
+                        </a>
+                        <a href="https://orcid.org/0009-0001-2562-5694" target="_blank" class="inline-flex items-center px-5 py-3 bg-green-50 text-green-600 rounded-lg hover:bg-green-100 transition-all font-medium">
+                            <i class="fab fa-orcid mr-2"></i>
+                            ORCID
+                        </a>
+                        <a href="https://www.researchgate.net/profile/Mohammad-Elayan-2" target="_blank" class="inline-flex items-center px-5 py-3 bg-cyan-50 text-cyan-600 rounded-lg hover:bg-cyan-100 transition-all font-medium">
+                            <i class="fab fa-researchgate mr-2"></i>
+                            ResearchGate
+                        </a>
+                        <a href="https://www.linkedin.com/in/mohammad-elayan-69096662" target="_blank" class="inline-flex items-center px-5 py-3 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-all font-medium">
+                            <i class="fab fa-linkedin mr-2"></i>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/mselayan" target="_blank" class="inline-flex items-center px-5 py-3 bg-gray-50 text-gray-700 rounded-lg hover:bg-gray-100 transition-all font-medium">
+                            <i class="fab fa-github mr-2"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-gray-50 to-blue-50 p-8 rounded-xl border border-gray-200">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-6">Research Interests</h3>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1 text-lg"></i>
+                            <span>Automated Vehicle Behavior</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1 text-lg"></i>
+                            <span>Traffic Safety Analysis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1 text-lg"></i>
+                            <span>Machine Learning in Transportation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1 text-lg"></i>
+                            <span>AV-Human Interaction</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1 text-lg"></i>
+                            <span>Traffic Simulation & Calibration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 mt-1 text-lg"></i>
+                            <span>Data-Driven Transportation Planning</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4">Mohammad Elayan</h3>
+                <p class="text-gray-300 mb-6">PhD Student in Civil Engineering | Transportation Researcher</p>
+                <p class="text-gray-400 text-sm">
+                    © 2025 Mohammad Elayan. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle with smooth animation
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Enhanced scroll effect for navigation
+        const nav = document.getElementById('main-nav');
+        let lastScroll = 0;
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                nav.classList.add('nav-scrolled');
+            } else {
+                nav.classList.remove('nav-scrolled');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards for animation
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            observer.observe(card);
+        });
+
+        // Show More News functionality
+        document.getElementById("showMoreBtn").addEventListener("click", function () {
+            const moreNews = document.getElementById("more-news");
+            
+            if (moreNews.classList.contains("hidden")) {
+                moreNews.classList.remove("hidden");
+                this.innerHTML = '<i class="fas fa-chevron-up mr-2"></i>Show Less';
+                
+                // Animate new cards
+                setTimeout(() => {
+                    moreNews.querySelectorAll('.card-hover').forEach((card, index) => {
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, index * 100);
+                    });
+                }, 50);
+            } else {
+                moreNews.classList.add("hidden");
+                this.innerHTML = '<i class="fas fa-chevron-down mr-2"></i>Show More News';
+                
+                // Scroll back to the button smoothly
+                this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        });
+    </script>
+</body>
+</html>
