@@ -9,10 +9,10 @@
 <link rel="canonical" href="https://mselayan.github.io/research.html">
 
 <title>Research | Mohammad Elayan</title>
-<meta name="description" content="Current research, research areas, and publications by Mohammad Elayan, PhD Researcher in Civil & Environmental Engineering (Transportation) at the University of Nebraska-Lincoln.">
+<meta name="description" content="Current research, research areas, and publications by Mohammad Elayan, PhD Candidate in Civil & Environmental Engineering (Transportation) at the University of Nebraska-Lincoln.">
 
 <meta property="og:title" content="Research | Mohammad Elayan">
-<meta property="og:description" content="Behavioral consensus for automated vehicles, quantum-inspired driver heterogeneity modeling, and data-driven traffic safety research.">
+<meta property="og:description" content="Multi-objective AV control, quantum models of driver behavior and interaction, traffic flow, traffic safety, and automated mobility research.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mselayan.github.io/research.html">
 <meta name="twitter:card" content="summary_large_image">
@@ -85,19 +85,27 @@
   .link-arrow:hover{ border-color: var(--teal); color: var(--teal); gap: 0.6em; }
 
   .figure-card{
-    background: #fff;
+    background-color: #F6F4EE;
+    background-image: radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px);
+    background-size: 14px 14px;
     border: 1px solid var(--line);
     transition: border-color 0.25s ease;
   }
   .figure-card:hover{ border-color: var(--teal); }
 
   .figure-plate{
-    background: var(--paper-alt);
+    background: #FBFAF7;
     border: 1px solid var(--line-soft);
   }
 
+  .tile{ background:#F7F5F0; border:1px solid var(--line-soft); border-radius:12px; padding:1rem 1.1rem; }
+  .tile p{ color: var(--graphite); font-size: 0.93rem; line-height: 1.55; margin: 0; }
+  .stat{ font-family:'Newsreader', serif; font-size:2.2rem; line-height:1; }
+
   .pub-row{ border-top: 1px solid var(--line-soft); }
   .pub-row:first-child{ border-top: none; }
+  .venue{ font-family:'IBM Plex Mono', monospace; font-size:0.66rem; letter-spacing:0.06em; text-transform:uppercase; padding:0.15rem 0.55rem; border-radius:999px; color:#fff; white-space:nowrap; }
+  .me{ color: var(--ink); font-weight: 600; }
 
   .fade-up{
     opacity: 0;
@@ -156,46 +164,54 @@
   <div class="max-w-6xl mx-auto px-5 sm:px-8 fade-up fu-1">
     <p class="font-mono text-xs tracking-[0.14em] uppercase mb-4" style="color:#7FD8C9;">Mohammad Elayan</p>
     <h1 class="font-display text-5xl sm:text-6xl leading-[1.05] text-white mb-5">Research</h1>
-    <p class="text-[#CFE3E1] text-lg leading-relaxed max-w-2xl">Current focus, research areas, and a full publication record.</p>
+    <p class="text-[#CFE3E1] text-lg leading-relaxed max-w-2xl">Current focus, research areas, and the full publication record.</p>
   </div>
 </section>
 
 <!-- Current Focus -->
 <section class="py-20 sm:py-24 border-b hairline">
-  <div class="max-w-5xl mx-auto px-5 sm:px-8">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
     <p class="inline-block font-mono text-xs tracking-[0.14em] uppercase mb-3 px-3 py-1 rounded-full text-white" style="background:#0E7C86;">§01 · Current Focus</p>
-    <h2 class="font-display text-3xl sm:text-4xl mb-14">Two Forces in Mixed Traffic</h2>
+    <h2 class="font-display text-3xl sm:text-4xl mb-4">Two Connected Threads</h2>
+    <p class="text-[var(--graphite)] max-w-3xl mb-14">Automated vehicles are expected to balance safety, flow, and smoothness, and to interact well with drivers who all behave differently. My work learns both the balance and the behavior from real data.</p>
 
-    <div class="grid md:grid-cols-2 gap-10">
+    <div class="grid md:grid-cols-2 gap-6">
 
-      <div>
-        <h3 class="font-display text-2xl mb-3">Behavioral Consensus &amp; Multi-Objective AV Learning</h3>
-        <p class="text-[var(--graphite)] leading-relaxed mb-6">
-          Autonomous vehicles must balance safety, efficiency, and interaction, goals that are frequently at odds and cannot be resolved by any single hand-crafted reward. This thread defines <strong class="text-[var(--ink)]">behavioral consensus</strong> as the joint alignment of these three dimensions, derives an empirical Pareto surface directly from naturalistic trajectories, and uses that surface as the target a reinforcement learning agent, trained with Soft Actor-Critic in SUMO, learns to drive toward on a timestep basis, with no access to future data.
-        </p>
-        <div class="figure-plate p-3 mb-6">
-          <img src="images/Consensus_Work.png" alt="Graphical abstract: empirical Pareto frontier" class="w-full rounded-sm">
+      <div class="figure-card p-7 sm:p-8 flex flex-col" style="background-color:#F1F5F5; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-top: 5px solid #0E7C86;">
+        <p class="eyebrow mb-2" style="color:#0E7C86;">Thread 1 · AV Control</p>
+        <h3 class="font-display text-2xl mb-3">Behavioral Alignment and Multi-Objective AV Control</h3>
+        <p class="text-[var(--graphite)] leading-relaxed mb-5">Most AV controllers resolve the conflict among objectives with one hand-weighted reward. This thread measures how real automated vehicles trade off risk, flow, and smoothness in naturalistic trajectory data, builds the empirical frontier of what real driving achieves, and trains reinforcement learning policies in SUMO to drive toward it.</p>
+        <div class="grid sm:grid-cols-2 gap-3 mb-6">
+          <div class="tile"><p class="stat mb-2" style="color:#0E7C86;">17.6% → 12.6%</p><p>Share of time steps violating two or more objectives, against a baseline car-following model.</p></div>
+          <div class="tile"><p class="stat mb-2" style="color:#0E7C86;">5 of 5</p><p>Facility types held out of training where compound violations fell, without retraining.</p></div>
         </div>
+        <div class="figure-plate p-3 mb-6 mt-auto"><img src="images/Consensus_Work.png" alt="Empirical Pareto frontier of automated driving" class="w-full rounded-sm"></div>
         <div class="flex flex-wrap gap-x-6 gap-y-2 font-mono text-sm">
-          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0968090X26002706" target="_blank" class="link-arrow">Paper <span>↗</span></a>
+          <a href="https://www.sciencedirect.com/science/article/pii/S0968090X26002706" target="_blank" class="link-arrow">Framework paper <span>↗</span></a>
           <a href="https://github.com/wissamkontar/Consensus-AV-Analysis" target="_blank" class="link-arrow">Code <span>↗</span></a>
         </div>
       </div>
 
-      <div>
-        <h3 class="font-display text-2xl mb-3">Quantum-Inspired Representation of Driver Heterogeneity</h3>
-        <p class="text-[var(--graphite)] leading-relaxed mb-6">
-          Rather than reducing driver heterogeneity to discrete labels such as aggressive or cautious, this thread represents each surrounding driver as an evolving <strong class="text-[var(--ink)]">density matrix</strong> in a nonlinear feature space, continuous, probabilistic, context-dependent, and history-dependent. The representation recovers interpretable driver profiles without supervision and reproduces macroscopic traffic phenomena, such as the fundamental diagram and hysteresis, that were never built into the model.
-        </p>
-        <div class="figure-plate p-3 mb-6">
-          <img src="images/Quantum_Work.png" alt="Framework overview: density-matrix behavioral representation" class="w-full rounded-sm">
+      <div class="figure-card p-7 sm:p-8 flex flex-col" style="background-color:#F6F2F7; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-top: 5px solid #9A3FC2;">
+        <p class="eyebrow mb-2" style="color:#9A3FC2;">Thread 2 · Behavior</p>
+        <h3 class="font-display text-2xl mb-3">Quantum Modeling of Driver Behavior</h3>
+        <p class="text-[var(--graphite)] leading-relaxed mb-5">Instead of fixing driver types or functional forms in advance, this thread represents each driver as an evolving density matrix that holds the full range of observed behavior, updates with context and history, and learns how behavioral variables interact. Trained without labels on trajectory data, it recovers interpretable behavioral profiles and the smooth transitions between them.</p>
+        <div class="grid sm:grid-cols-2 gap-3 mb-6">
+          <div class="tile"><p class="font-display text-lg text-[var(--ink)] mb-1">Hysteresis</p><p>A driver at the same speed entering and leaving a wave gets different profiles, because the state carries its recent history.</p></div>
+          <div class="tile"><p class="font-display text-lg text-[var(--ink)] mb-1">Fundamental diagram</p><p>Profiles map onto distinct traffic regimes, though the model never saw aggregate flow or density.</p></div>
         </div>
+        <div class="figure-plate p-3 mb-6 mt-auto"><img src="images/Quantum_Work.png" alt="Density-matrix representation of driver behavior" class="w-full rounded-sm"></div>
         <div class="flex flex-wrap gap-x-6 gap-y-2 font-mono text-sm">
           <a href="https://arxiv.org/abs/2608.25907" target="_blank" class="link-arrow">Paper <span>↗</span></a>
           <a href="https://github.com/mselayan/quantum-driver-representation" target="_blank" class="link-arrow">Code <span>↗</span></a>
         </div>
       </div>
 
+    </div>
+
+    <div class="mt-6 rounded-xl p-6 sm:p-7" style="background:#EEF2F7; border:1px solid #1E6FD133;">
+      <p class="eyebrow mb-2" style="color:#1E6FD1;">Next · Interaction</p>
+      <p class="text-[var(--graphite)] leading-relaxed max-w-4xl">The two threads meet in models of interaction: drivers who remember recent encounters and respond to their neighbors both one by one and as a group, modeled for individual drivers and for whole neighborhoods of vehicles. These models will let an AV choose the balance suited to the drivers actually around it, and make realistic, heterogeneous drivers feasible at network simulation scale.</p>
     </div>
   </div>
 </section>
@@ -205,45 +221,37 @@
   <div class="max-w-6xl mx-auto px-5 sm:px-8">
     <p class="inline-block font-mono text-xs tracking-[0.14em] uppercase mb-3 px-3 py-1 rounded-full text-white" style="background:#9A3FC2;">§02 · Research Areas</p>
     <h2 class="font-display text-3xl sm:text-4xl mb-14">Research Areas</h2>
-
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      <div class="figure-card p-7" style="border-top: 5px solid #0E7C86;">
+      <div class="figure-card p-7" style="background-color:#F1F5F5; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-top: 5px solid #0E7C86;">
         <p class="eyebrow mb-2" style="color:#0E7C86;">01</p>
-        <h3 class="font-display text-xl mb-3">Behavioral Consensus &amp; Multi-Objective AV Behavior</h3>
-        <p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed">Developing AV policies that adapt to competing objectives in simulated networks, using reinforcement learning with Pareto-based rewards from empirical data to test how consensus-aware designs change outcomes.</p>
+        <h3 class="font-display text-xl mb-3">Multi-Objective AV Control</h3>
+        <p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed">Measuring how automated vehicles balance safety, traffic flow, and smoothness in real driving, building the empirical frontier of what is achievable, and training AV control toward it.</p>
       </div>
-
-      <div class="figure-card p-7" style="border-top: 5px solid #9A3FC2;">
+      <div class="figure-card p-7" style="background-color:#F6F2F7; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-top: 5px solid #9A3FC2;">
         <p class="eyebrow mb-2" style="color:#9A3FC2;">02</p>
-        <h3 class="font-display text-xl mb-3">Driver Heterogeneity &amp; Quantum-Inspired Modeling</h3>
-        <p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed">Representing driver heterogeneity as evolving, probabilistic behavioral states rather than discrete driver types, capturing mixed and transitional patterns directly from naturalistic trajectory data.</p>
+        <h3 class="font-display text-xl mb-3">Driver and Travel Behavior Modeling</h3>
+        <p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed">Representing drivers and travelers as evolving quantum states learned from data, capturing differences between people and changes over time and context.</p>
       </div>
-
-      <div class="figure-card p-7" style="border-top: 5px solid #1E6FD1;">
+      <div class="figure-card p-7" style="background-color:#F1F4F8; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-top: 5px solid #1E6FD1;">
         <p class="eyebrow mb-2" style="color:#1E6FD1;">03</p>
-        <h3 class="font-display text-xl mb-3">AV-Pedestrian &amp; Mixed Traffic Interaction</h3>
-        <p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed">Using high-resolution datasets such as TGSIM to study AV responses at intersections, quantifying safety-critical events, pedestrian hesitation, and consensus violations across performance dimensions.</p>
+        <h3 class="font-display text-xl mb-3">Interaction with Memory and Group Effects</h3>
+        <p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed">Modeling how agents respond to their recent history and to their neighbors, one by one and as a group, for individual drivers and neighborhoods of vehicles.</p>
       </div>
-
-      <div class="figure-card p-7" style="border-top: 5px solid #E0711F;">
+      <div class="figure-card p-7" style="background-color:#F8F4F1; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-top: 5px solid #E0711F;">
         <p class="eyebrow mb-2" style="color:#E0711F;">04</p>
-        <h3 class="font-display text-xl mb-3">Empirical Trajectory &amp; Safety Analysis</h3>
-        <p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed">Integrating street-view imagery, traffic-calibrated location-based data, and crash records into spatially granular models of crash count and severity for safety assessment.</p>
+        <h3 class="font-display text-xl mb-3">Traffic Flow and Simulation</h3>
+        <p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed">Connecting individual behavior to stop-and-go waves, hysteresis, and the fundamental diagram, and building behavior models compact enough for network simulation.</p>
       </div>
-
-      <div class="figure-card p-7" style="border-top: 5px solid #3F8F5F;">
-        <p class="eyebrow mb-2" style="color:#3F8F5F;">05</p>
-        <h3 class="font-display text-xl mb-3">Microsimulation &amp; Data-Driven Traffic Calibration</h3>
-        <p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed">Building microsimulation environments calibrated to real-world traffic using mobility indicators, supporting scalable, data-driven approaches for multi-modal planning and safety applications.</p>
+      <div class="figure-card p-7" style="background-color:#F8F3F1; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-top: 5px solid #D4491F;">
+        <p class="eyebrow mb-2" style="color:#D4491F;">05</p>
+        <h3 class="font-display text-xl mb-3">Traffic Safety with Smart Data</h3>
+        <p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed">Surrogate safety measures from trajectories, and crash models built on location-based services data, street-level imagery, and the built environment.</p>
       </div>
-
-      <div class="figure-card p-7" style="border-top: 5px solid #D4491F;">
-        <p class="eyebrow mb-2" style="color:#D4491F;">06</p>
-        <h3 class="font-display text-xl mb-3">Geospatial Analysis &amp; Optimization for Mobility Systems</h3>
-        <p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed">Applying geospatial indexing and optimization frameworks to problems from pharmaceutical access to automated delivery, balancing efficiency, resource use, and equity in mobility systems.</p>
+      <div class="figure-card p-7" style="background-color:#F2F5F4; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-top: 5px solid #3F8F5F;">
+        <p class="eyebrow mb-2" style="color:#3F8F5F;">06</p>
+        <h3 class="font-display text-xl mb-3">Automated Mobility and Access</h3>
+        <p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed">Geospatial analysis to find underserved communities, such as rural pharmaceutical deserts, and optimization to plan conventional and autonomous delivery to them.</p>
       </div>
-
     </div>
   </div>
 </section>
@@ -252,146 +260,68 @@
 <section class="py-20 sm:py-24 border-b hairline">
   <div class="max-w-6xl mx-auto px-5 sm:px-8">
     <p class="inline-block font-mono text-xs tracking-[0.14em] uppercase mb-3 px-3 py-1 rounded-full text-white" style="background:#1E6FD1;">§03 · Publications</p>
-    <h2 class="font-display text-3xl sm:text-4xl mb-14">Publications</h2>
-
-    <div class="mb-14">
-      <h3 class="font-display text-2xl mb-1">Peer-Reviewed Publications</h3>
-      <p class="font-mono text-xs text-[var(--graphite)] uppercase tracking-wide mb-6">8 total</p>
+    <h2 class="font-display text-3xl sm:text-4xl mb-4">Publications</h2>
+    <p class="font-mono text-xs text-[var(--graphite)] uppercase tracking-wide mb-12">† Undergraduate researcher I mentored</p>
+    <div class="figure-card p-6 sm:p-8 mb-6" style="background-color:#F1F5F5; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-left: 5px solid #0E7C86;">
+      <div class="flex items-baseline justify-between mb-2"><h3 class="font-display text-2xl">Journal Articles</h3><p class="font-mono text-xs text-[var(--graphite)] uppercase tracking-wide">6</p></div>
       <div>
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">1.</b> Elayan, M. and Kontar, W. (2026). <em>"Can Automated Vehicles Have It All? A Consensus Framework for Diagnosing Behavioral Trade-offs in Mixed Traffic."</em> <strong class="text-[var(--ink)]">Transportation Research Part C: Emerging Technologies</strong>, Vol. 190.
-          <a href="https://www.sciencedirect.com/science/article/pii/S0968090X26002706" target="_blank" class="font-mono text-sm link-arrow ml-1">↗</a>
-        </div>
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">2.</b> Elayan, M. and Kontar, W. (2026). <em>"Learning the Pareto Space of Multi-Objective Autonomous Driving: A Modular, Data-Driven Approach."</em> Proceedings of the <strong class="text-[var(--ink)]">IEEE Intelligent Vehicles Symposium (IV)</strong>, Detroit, MI.
-          <a href="https://doi.org/10.1109/IV66570.2026.11624067" target="_blank" class="font-mono text-sm link-arrow ml-1">↗</a>
-        </div>        
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">3.</b> Elayan, M. and Kontar, W. (2025). <em>"Consensus-Aware AV Behavior: Trade-offs Between Safety, Interaction, and Performance in Mixed Urban Traffic."</em> Proceedings of the <strong class="text-[var(--ink)]">IEEE 28th International Conference on Intelligent Transportation Systems (ITSC)</strong>, Gold Coast, Australia, pp. 471 to 476.
-          <a href="https://doi.org/10.1109/ITSC60802.2025.11423532" target="_blank" class="font-mono text-sm link-arrow ml-1">↗</a>
-        </div>
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">4.</b> Elayan, M., Karki, S. and Hawkins, J. (2025). <em>"Better Safety Analyses through Smarter Data: Adding Open-Street-View and Traffic Calibrated-LBS Data to Pedestrian Crash Analysis in Lincoln, NE."</em> <strong class="text-[var(--ink)]">Transportation Research Record: Journal of the Transportation Research Board</strong>.
-          <a href="https://doi.org/10.1177/03611981251391714" target="_blank" class="font-mono text-sm link-arrow ml-1">↗</a>
-        </div>
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">5.</b> Elayan, M., Aldridge, N., Hawkins, J. and Nam, Y. (2025). <em>"Integrating StreetLight, EPS Smart Location Data and Road Attributes: A Random Forest Approach to Multi-Modal Traffic Calibration in Lincoln, Nebraska."</em> <strong class="text-[var(--ink)]">Journal of Transportation Engineering, Part A: Systems</strong>, Vol. 151(8).
-          <a href="https://doi.org/10.1061/JTEPBS.TEENG-8949" target="_blank" class="font-mono text-sm link-arrow ml-1">↗</a>
-        </div>
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">6.</b> Al-Khateeb, G., Al-Suleiman, T., Khedaywi, T. and Elayan, M. (2016). <em>"Studying Rutting Performance of Superpave Mixtures Using Unconfined Dynamic Creep and Simple Performance Tests."</em> <strong class="text-[var(--ink)]">Road Materials and Pavement Design</strong>, Vol. 19(2).
-        </div>
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">7.</b> Alsheyab, M., Khedaywi, T. and Elayan, M. (2013). <em>"Laboratory Study on Solidification/Stabilization of Unwanted Medications Using Asphalt as a Binder."</em> <strong class="text-[var(--ink)]">Journal of Material Cycles and Waste Management</strong>, Vol. 15(2).
-        </div>
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">8.</b> Al-Suleiman, T. and Elayan, M. (2013). <em>"Gap Acceptance Behavior at U-turn Median Openings, Case Study in Jordan."</em> <strong class="text-[var(--ink)]">Jordan Journal of Civil Engineering</strong>, Vol. 7(3).
-        </div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">1.</b> <span class="venue mr-1 align-middle" style="background:#0E7C86;">TR-C</span> <span class="me">Elayan, M.</span> and Kontar, W. (2026). <em>"Can Automated Vehicles Have It All? A Consensus Framework for Diagnosing Behavioral Trade-offs in Mixed Traffic."</em> <strong class="text-[var(--ink)]">Transportation Research Part C: Emerging Technologies</strong>, Vol. 190, 105782. <a href="https://doi.org/10.1016/j.trc.2026.105782" target="_blank" class="font-mono text-sm link-arrow ml-1">↗</a></div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">2.</b> <span class="venue mr-1 align-middle" style="background:#D4491F;">TRR</span> <span class="me">Elayan, M.</span>, Karki, S. and Hawkins, J. (2025). <em>"Better Safety Analyses through Smarter Data: Adding Open-Street-View and Traffic-Calibrated Location-Based Services Data to Pedestrian Crash Analysis in Lincoln, NE."</em> <strong class="text-[var(--ink)]">Transportation Research Record</strong>. <a href="https://doi.org/10.1177/03611981251391714" target="_blank" class="font-mono text-sm link-arrow ml-1">↗</a></div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">3.</b> <span class="venue mr-1 align-middle" style="background:#3F8F5F;">ASCE</span> <span class="me">Elayan, M.</span>, Aldridge, N., Hawkins, J. and Nam, Y. (2025). <em>"Integrating StreetLight, EPA Smart Location Data and Road Attributes: A Random Forest Approach to Multi-Modal Traffic Calibration in Lincoln, Nebraska."</em> <strong class="text-[var(--ink)]">Journal of Transportation Engineering, Part A: Systems</strong>, Vol. 151(8). <a href="https://doi.org/10.1061/JTEPBS.TEENG-8949" target="_blank" class="font-mono text-sm link-arrow ml-1">↗</a></div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">4.</b> Al-Khateeb, G., Al-Suleiman, T., Khedaywi, T. and <span class="me">Elayan, M.</span> (2016). <em>"Studying Rutting Performance of Superpave Mixtures Using Unconfined Dynamic Creep and Simple Performance Tests."</em> <strong class="text-[var(--ink)]">Road Materials and Pavement Design</strong>, Vol. 19(2). <a href="https://www.tandfonline.com/doi/abs/10.1080/14680629.2016.1261722" target="_blank" class="font-mono text-sm link-arrow ml-1">↗</a></div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">5.</b> Al-Suleiman, T. and <span class="me">Elayan, M.</span> (2013). <em>"Gap Acceptance Behavior at U-turn Median Openings: Case Study in Jordan."</em> <strong class="text-[var(--ink)]">Jordan Journal of Civil Engineering</strong>, Vol. 7(3). <a href="https://www.researchgate.net/publication/276271747" target="_blank" class="font-mono text-sm link-arrow ml-1">↗</a></div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">6.</b> Alsheyab, M., Khedaywi, T. and <span class="me">Elayan, M.</span> (2013). <em>"Laboratory Study on Solidification/Stabilization of Unwanted Medications Using Asphalt as a Binder."</em> <strong class="text-[var(--ink)]">Journal of Material Cycles and Waste Management</strong>, Vol. 15(2). <a href="https://link.springer.com/article/10.1007/s10163-012-0099-0" target="_blank" class="font-mono text-sm link-arrow ml-1">↗</a></div>
       </div>
     </div>
-
-    <div class="mb-14">
-      <h3 class="font-display text-2xl mb-1">Reports and Preprints</h3>
-      <p class="font-mono text-xs text-[var(--graphite)] uppercase tracking-wide mb-6">6 total</p>
+    <div class="figure-card p-6 sm:p-8 mb-6" style="background-color:#F6F2F7; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-left: 5px solid #9A3FC2;">
+      <div class="flex items-baseline justify-between mb-2"><h3 class="font-display text-2xl">Peer-Reviewed Conference Proceedings</h3><p class="font-mono text-xs text-[var(--graphite)] uppercase tracking-wide">3</p></div>
       <div>
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">1.</b> Armantalab, O., Elayan, M. and Kontar, W. (2026). <em>"A Quantum-Inspired Representation of Dynamic Travel Behavior."</em>
-          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7533331" target="_blank" class="font-mono text-sm link-arrow ml-1">↗</a>
-        </div>        
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">2.</b> Elayan, M. and Kontar, W. (2026). <em>"Quantum-Inspired Modeling of Driving Behavior."</em> arXiv preprint.
-          <a href="https://arxiv.org/abs/2608.25907" target="_blank" class="font-mono text-sm link-arrow ml-1">↗</a>
-        </div>
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">3.</b> Elayan, M. and Kontar, W. (2026). <em>"Behavioral Heterogeneity as Quantum-Inspired Representation."</em> arXiv preprint.
-          <a href="https://arxiv.org/abs/2603.22729" target="_blank" class="font-mono text-sm link-arrow ml-1">↗</a>
-        </div>
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">4.</b> Elayan, M. and Kontar, W. (2026). <em>"Learning the Pareto Space of Multi-Objective Autonomous Driving: A Modular, Data-Driven Approach."</em> arXiv preprint.
-          <a href="https://doi.org/10.48550/arXiv.2601.18913" target="_blank" class="font-mono text-sm link-arrow ml-1">↗</a>
-        </div>
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">5.</b> Elayan, M. and Kontar, W. (2025). <em>"Consensus-Aware AV Behavior: Trade-offs Between Safety, Interaction, and Performance in Mixed Urban Traffic."</em> arXiv preprint.
-          <a href="https://doi.org/10.48550/arXiv.2505.04379" target="_blank" class="font-mono text-sm link-arrow ml-1">↗</a>
-        </div>
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">6.</b> Nam, Y., Hawkins, J., Butler, D., Aldridge, N., Elayan, M. and Yoo, J. (2024). <em>"Modeling Pedestrian and Bicyclist Crash Exposure with Location-Based Service Data."</em> Nebraska Department of Transportation, Technical Report No. SPR-FY23(025).
-          <a href="https://rosap.ntl.bts.gov/view/dot/75258" target="_blank" class="font-mono text-sm link-arrow ml-1">↗</a>
-        </div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">1.</b> <span class="venue mr-1 align-middle" style="background:#9A3FC2;">IEEE ITSC</span> <span class="me">Elayan, M.</span> and Kontar, W. (2026). <em>"Behavioral Heterogeneity as Quantum-Inspired Representation."</em> Proceedings of the <strong class="text-[var(--ink)]">IEEE 29th International Conference on Intelligent Transportation Systems (ITSC)</strong>, Naples, Italy. <span class="text-[#9A3FC2] font-medium">Best Paper Award shortlist.</span> <a href="https://arxiv.org/abs/2603.22729" target="_blank" class="font-mono text-sm link-arrow ml-1">arXiv ↗</a> <a href="https://github.com/wissamkontar/Behavioral-Heterogeneity-as-Quantum-Inspired-Representation" target="_blank" class="font-mono text-sm link-arrow ml-1">Code ↗</a></div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">2.</b> <span class="venue mr-1 align-middle" style="background:#0E7C86;">IEEE IV</span> <span class="me">Elayan, M.</span> and Kontar, W. (2026). <em>"Learning the Pareto Space of Multi-Objective Autonomous Driving: A Modular, Data-Driven Approach."</em> Proceedings of the <strong class="text-[var(--ink)]">IEEE Intelligent Vehicles Symposium (IV)</strong>, Plymouth, MI. <a href="https://doi.org/10.1109/IV66570.2026.11624067" target="_blank" class="font-mono text-sm link-arrow ml-1">↗</a> <a href="https://doi.org/10.48550/arXiv.2601.18913" target="_blank" class="font-mono text-sm link-arrow ml-1">arXiv ↗</a> <a href="https://github.com/wissamkontar/Learning-the-Pareto-Space-of-Multi-Objective-Autonomous-Driving" target="_blank" class="font-mono text-sm link-arrow ml-1">Code ↗</a></div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">3.</b> <span class="venue mr-1 align-middle" style="background:#0E7C86;">IEEE ITSC</span> <span class="me">Elayan, M.</span> and Kontar, W. (2025). <em>"Consensus-Aware AV Behavior: Trade-offs Between Safety, Interaction, and Performance in Mixed Urban Traffic."</em> Proceedings of the <strong class="text-[var(--ink)]">IEEE 28th International Conference on Intelligent Transportation Systems (ITSC)</strong>, Gold Coast, Australia, pp. 471 to 476. <a href="https://doi.org/10.1109/ITSC60802.2025.11423532" target="_blank" class="font-mono text-sm link-arrow ml-1">↗</a> <a href="https://doi.org/10.48550/arXiv.2505.04379" target="_blank" class="font-mono text-sm link-arrow ml-1">arXiv ↗</a></div>
       </div>
     </div>
-
-    <div class="mb-14">
-      <h3 class="font-display text-2xl mb-1">Conference Papers &amp; Presentations</h3>
-      <p class="font-mono text-xs text-[var(--graphite)] uppercase tracking-wide mb-6">12 total</p>
-      
+    <div class="figure-card p-6 sm:p-8 mb-6" style="background-color:#F1F4F8; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-left: 5px solid #1E6FD1;">
+      <div class="flex items-baseline justify-between mb-2"><h3 class="font-display text-2xl">Under Review</h3><p class="font-mono text-xs text-[var(--graphite)] uppercase tracking-wide">4</p></div>
       <div>
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">1.</b> Elayan, M. (2027). <em>"Driving with Strangers: Behavioral Consensus and Driver Heterogeneity for Autonomous Vehicles in Mixed Traffic."</em> <strong class="text-[var(--ink)]">TRB 106th Annual Meeting, Emerging PhD Research in Traffic Flow Theory, Operations, and ITS (ACF00)</strong>, Washington, DC. [Accepted]
-        </div>
-    
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">2.</b> Gabrys, G., Elayan, M., Armantalab, O. and Kontar, W. (2027). <em>"Where Pharmaceutical Deserts Are and How to Serve Them: A Geospatial Index and Autonomous Routing Study in Rural Nebraska."</em> <strong class="text-[var(--ink)]">TRB 106th Annual Meeting</strong>, Washington, DC. [Accepted]
-        </div>
-    
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">3.</b> Elayan, M., Armantalab, O. and Kontar, W. (2027). <em>"Quantum-Inspired Modeling of Driving Behavior."</em> <strong class="text-[var(--ink)]">TRB 106th Annual Meeting</strong>, Washington, DC. [Accepted]
-        </div>
-    
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">4.</b> Elayan, M. and Kontar, W. (2027). <em>"Learning Behavioral Consensus for Autonomous Driving in Mixed Traffic."</em> <strong class="text-[var(--ink)]">TRB 106th Annual Meeting</strong>, Washington, DC. [Accepted]
-        </div>
-    
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">5.</b> Elayan, M. and Kontar, W. (2026). <em>"Behavioral Heterogeneity as Quantum-Inspired Representation."</em> <strong class="text-[var(--ink)]">IEEE ITSC</strong>, Naples, Italy. [Presented]
-        </div>
-    
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">6.</b> Elayan, M. and Kontar, W. (2026). <em>"Learning the Pareto Space of Multi-Objective Autonomous Driving: A Modular, Data-Driven Approach."</em> <strong class="text-[var(--ink)]">IEEE Intelligent Vehicles Symposium (IV)</strong>, Detroit, MI. [Presented]
-        </div>
-    
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">7.</b> Elayan, M. and Kontar, W. (2026). <em>"Consensus-Aware AV Behavior: Empirical Pareto-Guided Reinforcement Learning for Mixed Traffic."</em> <strong class="text-[var(--ink)]">NSF NAIRR Annual Meeting</strong>, Arlington, VA. [Presented]
-        </div>
-    
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">8.</b> Elayan, M. and Kontar, W. (2026). <em>"The Empirical Pareto Frontier of Automated Driving."</em> <strong class="text-[var(--ink)]">College of Engineering 7th Annual Graduate Student Symposium</strong>, UNL. [Presented]
-        </div>
-    
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">9.</b> Elayan, M. and Kontar, W. (2026). <em>"A Unified Framework for Consensus-Aware AV Behavior."</em> <strong class="text-[var(--ink)]">TRB 105th Annual Meeting</strong>, Washington, DC. [Presented]
-        </div>
-    
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">10.</b> Armantalab, O., Elayan, M. and Hawkins, J. (2025). <em>"Multi-Stage Clustering of Daily Activity Time Series."</em> <strong class="text-[var(--ink)]">TRB 105th Annual Meeting</strong>, Washington, DC. [Presented]
-        </div>
-    
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">11.</b> Elayan, M. and Kontar, W. (2025). <em>"Consensus-Aware AV Behavior: Trade-offs Between Safety, Interaction, and Performance in Mixed Urban Traffic."</em> <strong class="text-[var(--ink)]">IEEE ITSC</strong>, Gold Coast, Australia. [Presented]
-        </div>
-    
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">12.</b> Elayan, M., Karki, S. and Hawkins, J. (2025). <em>"Better Safety Analyses through Smarter Data."</em> <strong class="text-[var(--ink)]">TRB 104th Annual Meeting</strong>, Washington, DC. [Presented]
-        </div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">1.</b> <span class="venue mr-1 align-middle" style="background:#0E7C86;">TR-C</span> <span class="me">Elayan, M.</span>, Kim, Y., Ahn, S. and Kontar, W. <em>"From Observed Trade-Offs to Learned Behavior in Autonomous Driving."</em> Submitted to <strong class="text-[var(--ink)]">Transportation Research Part C: Emerging Technologies</strong>.</div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">2.</b> <span class="venue mr-1 align-middle" style="background:#9A3FC2;">TR-B</span> <span class="me">Elayan, M.</span>, Armantalab, O. and Kontar, W. <em>"Quantum-Inspired Modeling of Driving Behavior."</em> Submitted to <strong class="text-[var(--ink)]">Transportation Research Part B: Methodological</strong>. <a href="https://arxiv.org/abs/2608.25907" target="_blank" class="font-mono text-sm link-arrow ml-1">arXiv ↗</a></div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">3.</b> <span class="venue mr-1 align-middle" style="background:#9A3FC2;">TR-C</span> Armantalab, O., <span class="me">Elayan, M.</span>, Zhao, L., Huynh, N. and Kontar, W. <em>"A Quantum-Inspired Representation of Dynamic Travel Behavior."</em> Submitted to <strong class="text-[var(--ink)]">Transportation Research Part C: Emerging Technologies</strong>. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7533331" target="_blank" class="font-mono text-sm link-arrow ml-1">SSRN ↗</a></div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">4.</b> Armantalab, O., <span class="me">Elayan, M.</span> and Hawkins, J. <em>"Multi-Stage Clustering of Daily Activity Time Series: Patterns and Socio-Demographic Insights."</em> Submitted to <strong class="text-[var(--ink)]">Transportmetrica A: Transport Science</strong>.</div>
       </div>
     </div>
-
-    <div>
-      <h3 class="font-display text-2xl mb-1">Under Review</h3>
-      <p class="font-mono text-xs text-[var(--graphite)] uppercase tracking-wide mb-6">3 total</p>
-      <div>     
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">1.</b> Elayan, M., Armantalab, O. and Kontar, W. (2026). <em>"Quantum-Inspired Modeling of Driving Behavior."</em> Submitted to <strong class="text-[var(--ink)]">Transportation Research Part B: Methodological</strong>.
-        </div>
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">2.</b> Armantalab, O., Elayan, M., Zhao, L., Huynh, N. and Kontar, W. (2026). <em>"‘A Quantum-Inspired Representation of Dynamic Travel Behavior."</em> Submitted to <strong class="text-[var(--ink)]">Transportation Research Part C: Emerging Technologies</strong>.
-        </div>           
-        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed">
-          <b class="text-[var(--ink)]">3.</b> Armantalab, O., Elayan, M. and Hawkins, J. (2026). <em>"Multi-Stage Clustering of Daily Activity Time Series: Patterns and Socio-Demographic Insights."</em> Submitted to <strong class="text-[var(--ink)]">Transportmetrica A: Transport Science</strong>.
-        </div>
+    <div class="figure-card p-6 sm:p-8 mb-6" style="background-color:#F8F4F1; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-left: 5px solid #E0711F;">
+      <div class="flex items-baseline justify-between mb-2"><h3 class="font-display text-2xl">In Preparation</h3><p class="font-mono text-xs text-[var(--graphite)] uppercase tracking-wide">1</p></div>
+      <div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">1.</b> <span class="me">Elayan, M.</span> and Kontar, W. <em>"Quantum Modeling of Interacting Agents."</em></div>
       </div>
     </div>
-
+    <div class="figure-card p-6 sm:p-8 mb-6" style="background-color:#F2F5F4; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-left: 5px solid #3F8F5F;">
+      <div class="flex items-baseline justify-between mb-2"><h3 class="font-display text-2xl">Technical Reports</h3><p class="font-mono text-xs text-[var(--graphite)] uppercase tracking-wide">1</p></div>
+      <div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">1.</b> <span class="venue mr-1 align-middle" style="background:#3F8F5F;">NDOT</span> Nam, Y., Hawkins, J., Butler, D., Aldridge, N., <span class="me">Elayan, M.</span> and Yoo, J. (2024). <em>"Modeling Pedestrian and Bicyclist Crash Exposure with Location-Based Service Data."</em> Nebraska Department of Transportation, Report No. SPR-FY23(025). <a href="https://rosap.ntl.bts.gov/view/dot/75258" target="_blank" class="font-mono text-sm link-arrow ml-1">↗</a></div>
+      </div>
+    </div>
+    <div class="figure-card p-6 sm:p-8" style="background-color:#F8F3F1; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-left: 5px solid #D4491F;">
+      <div class="flex items-baseline justify-between mb-2"><h3 class="font-display text-2xl">Conference Presentations</h3><p class="font-mono text-xs text-[var(--graphite)] uppercase tracking-wide">16</p></div>
+      <div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">1.</b> <span class="venue mr-1 align-middle" style="background:#D4491F;">TRB</span> <span class="me">Elayan, M.</span> (2027). <em>"Driving with Strangers: Behavioral Consensus and Driver Heterogeneity for Autonomous Vehicles in Mixed Traffic."</em> <strong class="text-[var(--ink)]">TRB 106th Annual Meeting, Emerging PhD Research in Traffic Flow Theory, Operations, and ITS (ACF00)</strong>, Washington, DC. [Accepted]</div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">2.</b> <span class="venue mr-1 align-middle" style="background:#D4491F;">TRB</span> Gabrys, G.<sup>†</sup>, <span class="me">Elayan, M.</span>, Armantalab, O. and Kontar, W. (2027). <em>"Where Pharmaceutical Deserts Are and How to Serve Them: A Geospatial Index and Autonomous Routing Study in Rural Nebraska."</em> <strong class="text-[var(--ink)]">TRB 106th Annual Meeting</strong>, Washington, DC. [Accepted]</div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">3.</b> <span class="venue mr-1 align-middle" style="background:#D4491F;">TRB</span> <span class="me">Elayan, M.</span>, Armantalab, O. and Kontar, W. (2027). <em>"Quantum-Inspired Modeling of Driving Behavior."</em> <strong class="text-[var(--ink)]">TRB 106th Annual Meeting</strong>, Washington, DC. [Accepted]</div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">4.</b> <span class="venue mr-1 align-middle" style="background:#D4491F;">TRB</span> <span class="me">Elayan, M.</span> and Kontar, W. (2027). <em>"Learning Behavioral Consensus for Autonomous Driving in Mixed Traffic."</em> <strong class="text-[var(--ink)]">TRB 106th Annual Meeting</strong>, Washington, DC. [Accepted]</div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">5.</b> <span class="venue mr-1 align-middle" style="background:#9A3FC2;">IEEE ITSC</span> <span class="me">Elayan, M.</span> and Kontar, W. (2026). <em>"Behavioral Heterogeneity as Quantum-Inspired Representation."</em> <strong class="text-[var(--ink)]">IEEE ITSC</strong>, Naples, Italy.</div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">6.</b> <span class="venue mr-1 align-middle" style="background:#0E7C86;">IEEE IV</span> <span class="me">Elayan, M.</span> and Kontar, W. (2026). <em>"Learning the Pareto Space of Multi-Objective Autonomous Driving."</em> <strong class="text-[var(--ink)]">IEEE IV</strong>, Plymouth, MI.</div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">7.</b> <span class="venue mr-1 align-middle" style="background:#1E6FD1;">NSF</span> <span class="me">Elayan, M.</span> and Kontar, W. (2026). <em>"Consensus-Aware AV Behavior: Empirical Pareto-Guided Reinforcement Learning for Mixed Traffic."</em> <strong class="text-[var(--ink)]">NSF NAIRR Annual Meeting</strong>, Arlington, VA.</div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">8.</b> <span class="venue mr-1 align-middle" style="background:#D4491F;">TRB</span> <span class="me">Elayan, M.</span> and Kontar, W. (2026). <em>"A Unified Framework for Consensus-Aware AV Behavior."</em> <strong class="text-[var(--ink)]">TRB 105th Annual Meeting</strong>, Washington, DC.</div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">9.</b> <span class="venue mr-1 align-middle" style="background:#D4491F;">TRB</span> Armantalab, O., <span class="me">Elayan, M.</span> and Hawkins, J. (2026). <em>"Multi-Stage Clustering of Daily Activity Time Series."</em> <strong class="text-[var(--ink)]">TRB 105th Annual Meeting</strong>, Washington, DC.</div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">10.</b> <span class="venue mr-1 align-middle" style="background:#9A3FC2;">IEEE ITSC</span> <span class="me">Elayan, M.</span> and Kontar, W. (2025). <em>"Consensus-Aware AV Behavior: Trade-offs Between Safety, Interaction, and Performance in Mixed Urban Traffic."</em> <strong class="text-[var(--ink)]">IEEE ITSC</strong>, Gold Coast, Australia.</div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">11.</b> <span class="venue mr-1 align-middle" style="background:#D4491F;">TRB</span> <span class="me">Elayan, M.</span>, Karki, S. and Hawkins, J. (2025). <em>"Better Safety Analyses through Smarter Data."</em> <strong class="text-[var(--ink)]">TRB 104th Annual Meeting</strong>, Washington, DC.</div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">12.</b> <span class="venue mr-1 align-middle" style="background:#E0711F;">UNL</span> <strong class="text-[var(--ink)]">UNL College of Engineering 7th Annual Graduate Student Symposium</strong>, Lincoln, NE, 2026.</div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">13.</b> <span class="venue mr-1 align-middle" style="background:#3F8F5F;">BTR</span> <strong class="text-[var(--ink)]">Bridging Transportation Researchers (BTR) Conference No. 8</strong> (2 presentations).</div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">14.</b> <span class="venue mr-1 align-middle" style="background:#3F8F5F;">BTR</span> <strong class="text-[var(--ink)]">Bridging Transportation Researchers (BTR) Conference No. 7</strong>.</div>
+        <div class="pub-row py-4 text-[var(--graphite)] leading-relaxed"><b class="text-[var(--ink)]">15.</b> <span class="venue mr-1 align-middle" style="background:#E0711F;">MIDTRANS</span> <strong class="text-[var(--ink)]">Midwest Innovation and Development in Transportation Symposium (MIDTRANS)</strong>.</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -415,7 +345,7 @@
 <!-- Footer -->
 <footer class="py-10" style="background:#0B2B30;">
   <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-between items-center gap-3 font-mono text-xs" style="color:#8FB8B4;">
-    <p>Mohammad Elayan · PhD Researcher, Civil &amp; Environmental Engineering</p>
+    <p>Mohammad Elayan · PhD Candidate, Civil &amp; Environmental Engineering</p>
     <p>© 2026 Mohammad Elayan</p>
   </div>
 </footer>
