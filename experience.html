@@ -84,7 +84,9 @@
   .link-arrow:hover{ border-color: var(--teal); color: var(--teal); gap: 0.6em; }
 
   .figure-card{
-    background: #fff;
+    background-color: #F6F4EE;
+    background-image: radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px);
+    background-size: 14px 14px;
     border: 1px solid var(--line);
     transition: border-color 0.25s ease;
   }
@@ -110,17 +112,6 @@
     padding: 6px;
   }
 
-  table.proj-table{ border-collapse: collapse; width: 100%; }
-  table.proj-table th, table.proj-table td{
-    border-top: 1px solid var(--line-soft);
-    padding: 0.55rem 0.6rem;
-    text-align: right;
-    font-size: 0.85rem;
-  }
-  table.proj-table th:first-child, table.proj-table td:first-child{ text-align: left; }
-  table.proj-table th{ font-family:'IBM Plex Mono', monospace; text-transform: uppercase; font-size: 0.68rem; letter-spacing: 0.05em; color: var(--graphite); font-weight: 500; }
-  table.proj-table tr:last-child td{ font-weight: 600; border-top: 2px solid var(--line); }
-
   .fade-up{
     opacity: 0;
     transform: translateY(14px);
@@ -133,6 +124,34 @@
     .fade-up{ animation: none; opacity: 1; transform: none; }
     html{ scroll-behavior: auto; }
   }
+
+
+  .tile{
+    background: #F7F5F0;
+    border: 1px solid var(--line-soft);
+    border-radius: 12px;
+    padding: 1.1rem 1.2rem;
+    position: relative;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  .tile:hover{ transform: translateY(-2px); border-color: var(--line); }
+  .tile-label{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.35rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .tile-label .dot{ width: 8px; height: 8px; border-radius: 999px; display: inline-block; }
+  .tile p{ color: var(--graphite); font-size: 0.93rem; line-height: 1.55; margin: 0; }
+
+  .bar-row{ display: grid; grid-template-columns: minmax(150px, 230px) 1fr 2.5rem; align-items: center; gap: 0.9rem; padding: 0.45rem 0; }
+  .bar-label{ font-size: 0.88rem; color: var(--ink); line-height: 1.3; }
+  .bar-track{ height: 14px; background: #ECE9E1; border: 1px solid var(--line-soft); border-radius: 999px; overflow: hidden; display: flex; }
+  .bar-seg{ height: 100%; }
+  .bar-total{ font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; text-align: right; color: var(--ink); }
+  .stat{ font-family: 'Newsreader', serif; font-size: 2.6rem; line-height: 1; }
 
   ::selection{ background: var(--teal-soft); color: var(--ink); }
 </style>
@@ -190,7 +209,7 @@
     <div class="space-y-8">
 
       <!-- UNL -->
-      <div class="figure-card p-7 sm:p-8" style="border-left: 5px solid #0E7C86;">
+      <div class="figure-card p-7 sm:p-8" style="background-color:#F1F5F5; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-left: 5px solid #0E7C86;">
         <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
           <div class="flex items-center gap-4">
             <img src="https://ucomm.unl.edu/sites/unl.edu.university-communication/files/styles/no_crop_720/public/media/image/nebraska-n.jpg?itok=4Vj3-oUs" alt="UNL logo" class="logo-chip">
@@ -207,16 +226,30 @@
         <p class="text-[var(--graphite)] leading-relaxed">
           PhD candidate in Dr. Wissam Kontar's research team at the Civil &amp; Environmental Engineering Department and Nebraska Transportation Center.
         </p>
-        <ul class="text-[var(--graphite)] leading-relaxed list-disc pl-5 space-y-1 mt-4">
-          <li>Behavioral alignment for automated vehicles: empirical trade-offs among risk, flow, and smoothness from naturalistic trajectory data, and reinforcement learning control trained and evaluated in SUMO on high-performance computing.</li>
-          <li>Quantum-inspired modeling of driver and traveler heterogeneity, and of interacting agents with memory and group effects.</li>
-          <li>Pedestrian and bicyclist crash exposure from location-based services data, street-level imagery, and built environment data, for the Nebraska Department of Transportation (2022 to 2024).</li>
-          <li>Teaching assistant for CIVE 202 and CIVE 361, including course project design, co-teaching labs, and a guest lab. <a href="teaching.html" class="link-arrow">Teaching details <span>→</span></a></li>
-        </ul>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-5">
+          <div class="tile"><div class="tile-label" style="color:#0E7C86;"><span class="dot" style="background:#0E7C86;"></span>AV behavioral alignment</div><p>Measures how automated vehicles trade off risk, flow, and smoothness in naturalistic trajectory data (TGSIM), and builds the empirical frontier of what real driving achieves.</p></div>
+          <div class="tile"><div class="tile-label" style="color:#0E7C86;"><span class="dot" style="background:#0E7C86;"></span>Learning-based AV control</div><p>Trains reinforcement learning policies in SUMO on high-performance computing, guided by those empirical trade-offs, and tests them on facility types held out of training.</p></div>
+          <div class="tile"><div class="tile-label" style="color:#9A3FC2;"><span class="dot" style="background:#9A3FC2;"></span>Driver heterogeneity</div><p>Represents each driver as an evolving quantum state learned from trajectory data (I-24 MOTION, TGSIM), capturing differences between drivers and changes over time.</p></div>
+          <div class="tile"><div class="tile-label" style="color:#9A3FC2;"><span class="dot" style="background:#9A3FC2;"></span>Interacting agents</div><p>Develops quantum models of agents with memory and group effects, at the level of individual drivers and of neighborhoods of vehicles.</p></div>
+          <div class="tile"><div class="tile-label" style="color:#9A3FC2;"><span class="dot" style="background:#9A3FC2;"></span>Travel behavior</div><p>Contributes to quantum models of dynamic travel behavior, applied to activity and mobility data.</p></div>
+          <div class="tile"><div class="tile-label" style="color:#1E6FD1;"><span class="dot" style="background:#1E6FD1;"></span>Safety and exposure</div><p>Estimated multimodal volumes from location-based services data and modeled pedestrian crashes with street-level imagery, for the Nebraska Department of Transportation (2022 to 2024).</p></div>
+        </div>
+
+        <div class="mt-6 rounded-xl p-5 sm:p-6" style="background:#F8EFE6; border:1px solid #E0711F33;">
+          <div class="tile-label" style="color:#E0711F;"><span class="dot" style="background:#E0711F;"></span>Teaching</div>
+          <div class="grid sm:grid-cols-3 gap-5 mt-3">
+            <div><p class="font-display text-lg text-[var(--ink)]">CIVE 202 · Teaching Assistant</p><p class="text-[var(--graphite)] text-[0.93rem] leading-relaxed">Three offerings. Designed course projects from client prompt and dataset to grading, prepared slides and materials, and co-taught all labs and several lectures.</p></div>
+            <div><p class="font-display text-lg text-[var(--ink)]">CIVE 361 · TA and Guest Lecturer</p><p class="text-[var(--graphite)] text-[0.93rem] leading-relaxed">Graded, held office hours, and gave feedback (Fall 2024). Designed and taught the work zone lab <em>Can We Close I-80 Tonight?</em> (Fall 2026).</p></div>
+            <div><p class="font-display text-lg text-[var(--ink)]">CIVE 990T · Guest Presenter</p><p class="text-[var(--graphite)] text-[0.93rem] leading-relaxed">Presented <em>Nobody Drives Like the Model Says</em> to the graduate transportation seminar (Fall 2026).</p></div>
+          </div>
+          <a href="teaching.html" class="link-arrow mt-4 inline-flex">Full teaching record <span>→</span></a>
+        </div>
+
+        <p class="text-[var(--graphite)] text-[0.93rem] mt-5">Also: researcher on the NSF National AI Research Resource pilot award, and author of six open-source research codebases on <a href="https://github.com/mselayan" target="_blank" class="link-arrow">GitHub <span>↗</span></a></p>
       </div>
 
       <!-- TrafQuest -->
-      <div class="figure-card p-7 sm:p-8" style="border-left: 5px solid #E0711F;">
+      <div class="figure-card p-7 sm:p-8" style="background-color:#F8F4F1; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-left: 5px solid #E0711F;">
         <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
           <div class="flex items-center gap-4">
             <img src="https://media.licdn.com/dms/image/v2/C510BAQG4IVB3qNbm0Q/company-logo_200_200/company-logo_200_200/0/1630563973053/trafquest_logo?e=2147483647&v=beta&t=6HLNXkBggzQySmf9RtR0pgwmgKySPjoU2dzjJTNqAys" alt="TrafQuest logo" class="logo-chip">
@@ -230,37 +263,74 @@
           <span class="role-pill" style="background:#E0711F;">Senior Transportation Engineer · 2019 to 2023</span>
           <span class="role-pill" style="background:#E0711F99;">Transportation Engineer · 2013 to 2019</span>
         </div>
-        <p class="text-[var(--graphite)] leading-relaxed mb-6">
-          Contributed to 111 projects across the UAE and MENA region and managed 63, including developments generating up to 26,000 peak-hour trips.
-        </p>
-        <ul class="text-[var(--graphite)] leading-relaxed list-disc pl-5 space-y-1 mb-6">
-          <li><strong class="text-[var(--ink)] font-medium">Modeling and simulation:</strong> microsimulation and travel demand models for trip generation and future scenarios.</li>
-          <li><strong class="text-[var(--ink)] font-medium">Traffic operations:</strong> network performance analysis, deficiency identification, and congestion mitigation.</li>
-          <li><strong class="text-[var(--ink)] font-medium">Multimodal integration:</strong> connectivity across metro, bus, marine, taxi, pedestrian, and cycling modes.</li>
-          <li><strong class="text-[var(--ink)] font-medium">Data analysis:</strong> large datasets, including parking demand analyses of millions of records.</li>
-          <li><strong class="text-[var(--ink)] font-medium">Safety and design:</strong> safety reviews, concept design reviews, and access, drop-off, and wayfinding design.</li>
-          <li><strong class="text-[var(--ink)] font-medium">Technical authoring:</strong> co-authored engineering manuals covering policy, planning, and design.</li>
-        </ul>
-        <table class="proj-table">
-          <thead>
-            <tr><th>Project Category</th><th>Total</th><th>Engineer</th><th>Manager</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Transportation Master Plan</td><td>21</td><td>13</td><td>8</td></tr>
-            <tr><td>Traffic Impact Study</td><td>65</td><td>25</td><td>40</td></tr>
-            <tr><td>Transportation Integration Study</td><td>11</td><td>1</td><td>10</td></tr>
-            <tr><td>Strategic Freight Transport Study</td><td>7</td><td>7</td><td>0</td></tr>
-            <tr><td>Parking Study</td><td>3</td><td>1</td><td>2</td></tr>
-            <tr><td>Traffic Management Plan</td><td>3</td><td>1</td><td>2</td></tr>
-            <tr><td>Evacuation Plan</td><td>1</td><td>0</td><td>1</td></tr>
-            <tr><td>Engineering Manual</td><td>1</td><td>1</td><td>0</td></tr>
-            <tr><td>Total</td><td>111</td><td>48</td><td>63</td></tr>
-          </tbody>
-        </table>
+        <div class="grid sm:grid-cols-3 gap-4 mb-8">
+          <div class="tile" style="background:#F8EFE6; border-color:#E0711F33;"><div class="stat" style="color:#E0711F;">10</div><p class="mt-2">years of practice in the UAE and MENA</p></div>
+          <div class="tile" style="background:#F8EFE6; border-color:#E0711F33;"><div class="stat" style="color:#E0711F;">111</div><p class="mt-2">projects delivered</p></div>
+          <div class="tile" style="background:#F8EFE6; border-color:#E0711F33;"><div class="stat" style="color:#E0711F;">63</div><p class="mt-2">as project manager</p></div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+          <div class="tile"><div class="tile-label" style="color:#E0711F;"><span class="dot" style="background:#E0711F;"></span>Modeling and simulation</div><p>Microsimulation and travel demand models for trip generation and future scenarios.</p></div>
+          <div class="tile"><div class="tile-label" style="color:#E0711F;"><span class="dot" style="background:#E0711F;"></span>Traffic operations</div><p>Network performance analysis, deficiency identification, and congestion mitigation.</p></div>
+          <div class="tile"><div class="tile-label" style="color:#E0711F;"><span class="dot" style="background:#E0711F;"></span>Multimodal integration</div><p>Connectivity across metro, bus, marine, taxi, pedestrian, and cycling modes.</p></div>
+          <div class="tile"><div class="tile-label" style="color:#E0711F;"><span class="dot" style="background:#E0711F;"></span>Data analysis</div><p>Large datasets, including parking demand analyses of millions of records.</p></div>
+          <div class="tile"><div class="tile-label" style="color:#E0711F;"><span class="dot" style="background:#E0711F;"></span>Safety and design</div><p>Safety reviews, concept design reviews, and access, drop-off, and wayfinding design.</p></div>
+          <div class="tile"><div class="tile-label" style="color:#E0711F;"><span class="dot" style="background:#E0711F;"></span>Technical authoring</div><p>Co-authored engineering manuals covering policy, planning, and design.</p></div>
+        </div>
+
+        <div class="rounded-xl p-5 sm:p-6" style="background:var(--paper-alt); border:1px solid var(--line-soft);">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
+            <p class="font-mono text-xs uppercase tracking-wide text-[var(--graphite)]">Projects by category</p>
+            <div class="flex items-center gap-4 font-mono text-xs text-[var(--graphite)]">
+              <span class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 rounded-sm" style="background:#E0711F;"></span>Manager</span>
+              <span class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 rounded-sm" style="background:#E0711F55;"></span>Engineer</span>
+            </div>
+          </div>
+            <div class="bar-row">
+              <div class="bar-label">Traffic Impact Study</div>
+              <div class="bar-track" style="width:100.0%;" title="40 as manager, 25 as engineer"><div class="bar-seg" style="width:61.5%; background:#E0711F;"></div><div class="bar-seg" style="width:38.5%; background:#E0711F55;"></div></div>
+              <div class="bar-total">65</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Transportation Master Plan</div>
+              <div class="bar-track" style="width:32.3%;" title="8 as manager, 13 as engineer"><div class="bar-seg" style="width:38.1%; background:#E0711F;"></div><div class="bar-seg" style="width:61.9%; background:#E0711F55;"></div></div>
+              <div class="bar-total">21</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Transportation Integration Study</div>
+              <div class="bar-track" style="width:16.9%;" title="10 as manager, 1 as engineer"><div class="bar-seg" style="width:90.9%; background:#E0711F;"></div><div class="bar-seg" style="width:9.1%; background:#E0711F55;"></div></div>
+              <div class="bar-total">11</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Strategic Freight Transport Study</div>
+              <div class="bar-track" style="width:10.8%;" title="0 as manager, 7 as engineer"><div class="bar-seg" style="width:0.0%; background:#E0711F;"></div><div class="bar-seg" style="width:100.0%; background:#E0711F55;"></div></div>
+              <div class="bar-total">7</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Parking Study</div>
+              <div class="bar-track" style="width:4.6%;" title="2 as manager, 1 as engineer"><div class="bar-seg" style="width:66.7%; background:#E0711F;"></div><div class="bar-seg" style="width:33.3%; background:#E0711F55;"></div></div>
+              <div class="bar-total">3</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Traffic Management Plan</div>
+              <div class="bar-track" style="width:4.6%;" title="2 as manager, 1 as engineer"><div class="bar-seg" style="width:66.7%; background:#E0711F;"></div><div class="bar-seg" style="width:33.3%; background:#E0711F55;"></div></div>
+              <div class="bar-total">3</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Evacuation Plan</div>
+              <div class="bar-track" style="width:3.0%;" title="1 as manager, 0 as engineer"><div class="bar-seg" style="width:100.0%; background:#E0711F;"></div><div class="bar-seg" style="width:0.0%; background:#E0711F55;"></div></div>
+              <div class="bar-total">1</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Engineering Manual</div>
+              <div class="bar-track" style="width:3.0%;" title="0 as manager, 1 as engineer"><div class="bar-seg" style="width:0.0%; background:#E0711F;"></div><div class="bar-seg" style="width:100.0%; background:#E0711F55;"></div></div>
+              <div class="bar-total">1</div>
+            </div>
+        </div>
       </div>
 
       <!-- JUST -->
-      <div class="figure-card p-7 sm:p-8" style="border-left: 5px solid #9A3FC2;">
+      <div class="figure-card p-7 sm:p-8" style="background-color:#F6F2F7; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-left: 5px solid #9A3FC2;">
         <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
           <div class="flex items-center gap-4">
             <img src="https://upload.wikimedia.org/wikipedia/en/a/ab/JUST_logo2.png" alt="JUST logo" class="logo-chip">
@@ -285,47 +355,41 @@
 
 <!-- Grants, Fellowships & Awards -->
 <section class="py-20 sm:py-24 border-b hairline" style="background:#9A3FC208;">
-  <div class="max-w-4xl mx-auto px-5 sm:px-8">
-    <p class="inline-block font-mono text-xs tracking-[0.14em] uppercase mb-3 px-3 py-1 rounded-full text-white" style="background:#9A3FC2;">§02 · Grants &amp; Fellowships</p>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <p class="inline-block font-mono text-xs tracking-[0.14em] uppercase mb-3 px-3 py-1 rounded-full text-white" style="background:#9A3FC2;">§02 · Grants &amp; Awards</p>
     <h2 class="font-display text-3xl sm:text-4xl mb-12">Grants, Fellowships &amp; Awards</h2>
-
-    <div class="space-y-6">
-      <div class="pb-6 border-b hairline-soft">
-        <p class="font-mono text-xs uppercase tracking-wide mb-1" style="color:#9A3FC2;">2026 · IEEE ITSC, Naples, Italy</p>
-        <h3 class="font-display text-xl mb-1">Best Paper Award Shortlist</h3>
-        <p class="text-[var(--graphite)]">"Behavioral Heterogeneity as Quantum-Inspired Representation." First author.</p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="figure-card p-6 sm:p-7" style="background-color:#F6F2F7; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-top: 5px solid #9A3FC2;">
+        <p class="font-mono text-xs uppercase tracking-wide text-[var(--graphite)] mb-1">2026 · IEEE ITSC, Naples</p>
+        <h3 class="font-display text-xl">Best Paper Award Shortlist</h3><p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed mt-2">"Behavioral Heterogeneity as Quantum-Inspired Representation." First author.</p>
       </div>
-      <div class="pb-6 border-b hairline-soft">
-        <p class="font-mono text-xs uppercase tracking-wide mb-1" style="color:#9A3FC2;">2026 · Bridging Transportation Researchers Conference</p>
-        <h3 class="font-display text-xl mb-1">Paper Award Shortlist</h3>
-        <p class="text-[var(--graphite)]">"Behavioral Heterogeneity as Quantum-Inspired Representation." First author.</p>
+      <div class="figure-card p-6 sm:p-7" style="background-color:#F6F2F7; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-top: 5px solid #9A3FC2;">
+        <p class="font-mono text-xs uppercase tracking-wide text-[var(--graphite)] mb-1">2026 · BTR Conference</p>
+        <h3 class="font-display text-xl">Paper Award Shortlist</h3><p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed mt-2">"Behavioral Heterogeneity as Quantum-Inspired Representation." First author.</p>
       </div>
-      <div class="pb-6 border-b hairline-soft">
-        <p class="font-mono text-xs uppercase tracking-wide mb-1" style="color:#9A3FC2;">2025 · National Science Foundation</p>
-        <h3 class="font-display text-xl mb-1">NSF National AI Research Resource (NAIRR) Pilot Grant</h3>
-        <p class="text-[var(--graphite)]">"Consensus-Seeking Autonomous Agents in Complex Cyber-Physical Transportation Systems" (Award No. NAIRR250132). Role: Researcher.</p>
+      <div class="figure-card p-6 sm:p-7" style="background-color:#F6F2F7; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-top: 5px solid #9A3FC2;">
+        <p class="font-mono text-xs uppercase tracking-wide text-[var(--graphite)] mb-1">2025 · National Science Foundation</p>
+        <h3 class="font-display text-xl">NAIRR Pilot Award</h3><p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed mt-2">"Consensus-Seeking Autonomous Agents in Complex Cyber-Physical Transportation Systems" (NAIRR250132). Role: Researcher.</p>
       </div>
-      <div class="pb-6 border-b hairline-soft">
-        <p class="font-mono text-xs uppercase tracking-wide mb-1" style="color:#9A3FC2;">2025, 2026</p>
-        <h3 class="font-display text-xl">UNL College of Engineering Professional Development Fellowship</h3>
+      <div class="figure-card p-6 sm:p-7" style="background-color:#F1F4F8; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-top: 5px solid #1E6FD1;">
+        <p class="font-mono text-xs uppercase tracking-wide text-[var(--graphite)] mb-1">2022 to 2024 · Nebraska DOT</p>
+        <h3 class="font-display text-xl">Funded Project: Pedestrian and Bicyclist Crash Exposure</h3><p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed mt-2">Report No. SPR-FY23(025). Role: Graduate Researcher.</p>
       </div>
-      <div class="pb-6 border-b hairline-soft">
-        <p class="font-mono text-xs uppercase tracking-wide mb-1" style="color:#9A3FC2;">2025, 2026</p>
+      <div class="figure-card p-6 sm:p-7" style="background-color:#F1F4F8; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-top: 5px solid #1E6FD1;">
+        <p class="font-mono text-xs uppercase tracking-wide text-[var(--graphite)] mb-1">2008 to 2012 · Ministry of Higher Education, Jordan</p>
+        <h3 class="font-display text-xl">Funded Project: Asphalt Mixtures for Highway Pavements</h3><p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed mt-2">Role: Research Assistant.</p>
+      </div>
+      <div class="figure-card p-6 sm:p-7" style="background-color:#F1F5F5; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-top: 5px solid #0E7C86;">
+        <p class="font-mono text-xs uppercase tracking-wide text-[var(--graphite)] mb-1">2025, 2026 · UNL College of Engineering</p>
+        <h3 class="font-display text-xl">Professional Development Fellowship</h3>
+      </div>
+      <div class="figure-card p-6 sm:p-7" style="background-color:#F1F5F5; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-top: 5px solid #0E7C86;">
+        <p class="font-mono text-xs uppercase tracking-wide text-[var(--graphite)] mb-1">2025, 2026 · UNL</p>
         <h3 class="font-display text-xl">Patrick T. McCoy Fund for Engineering Excellence</h3>
       </div>
-      <div>
-        <p class="font-mono text-xs uppercase tracking-wide mb-1" style="color:#9A3FC2;">2024 to 2027</p>
-        <h3 class="font-display text-xl">MATC &amp; NTC Travel Fund Scholarship</h3>
-      </div>
-      <div class="pt-6 border-t hairline-soft">
-        <p class="font-mono text-xs uppercase tracking-wide mb-1" style="color:#9A3FC2;">2022 to 2024 · Nebraska Department of Transportation</p>
-        <h3 class="font-display text-xl mb-1">Funded Project: Modeling Pedestrian and Bicyclist Crash Exposure with Location-Based Service Data</h3>
-        <p class="text-[var(--graphite)]">Report No. SPR-FY23(025). Role: Graduate Researcher.</p>
-      </div>
-      <div>
-        <p class="font-mono text-xs uppercase tracking-wide mb-1" style="color:#9A3FC2;">2008 to 2012 · Ministry of Higher Education and Scientific Research, Jordan</p>
-        <h3 class="font-display text-xl mb-1">Funded Project: New Technologies and Advanced Methodologies for Asphalt Mixtures of Highway Pavements in Jordan</h3>
-        <p class="text-[var(--graphite)]">Role: Research Assistant.</p>
+      <div class="figure-card p-6 sm:p-7" style="background-color:#F1F5F5; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-top: 5px solid #0E7C86;">
+        <p class="font-mono text-xs uppercase tracking-wide text-[var(--graphite)] mb-1">2024 to 2027 · MATC and NTC</p>
+        <h3 class="font-display text-xl">Travel Fund Scholarship</h3>
       </div>
     </div>
   </div>
@@ -333,75 +397,49 @@
 
 <!-- Mentorship -->
 <section class="py-20 sm:py-24 border-b hairline">
-  <div class="max-w-4xl mx-auto px-5 sm:px-8">
-    <p class="inline-block font-mono text-xs tracking-[0.14em] uppercase mb-3 px-3 py-1 rounded-full text-white" style="background:#1E6FD1;">§03 · Mentorship</p>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <p class="inline-block font-mono text-xs tracking-[0.14em] uppercase mb-3 px-3 py-1 rounded-full text-white" style="background:#E0711F;">§03 · Mentorship</p>
     <h2 class="font-display text-3xl sm:text-4xl mb-12">Undergraduate Research Mentorship</h2>
-
-    <div class="grid sm:grid-cols-2 gap-6">
-      <div class="figure-card p-6" style="border-top: 5px solid #1E6FD1;">
-        <p class="font-mono text-xs uppercase tracking-wide text-[var(--graphite)] mb-1">Jun to Aug 2026 · NSF REU Program, UNL</p>
-        <h3 class="font-display text-xl mb-2">Grace Gabrys</h3>
-        <p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed">Supervised research on the geospatial indexing of pharmaceutical deserts in Nebraska and optimization-based analysis of conventional and autonomous delivery options. Outcome: first-author paper accepted at the TRB 2027 Annual Meeting.</p>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="figure-card p-6 sm:p-7" style="background-color:#F8F4F1; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-top: 5px solid #E0711F;">
+        <p class="font-mono text-xs uppercase tracking-wide text-[var(--graphite)] mb-1">Jun to Aug 2026 · NSF REU, UNL</p>
+        <h3 class="font-display text-xl">Grace Gabrys</h3><p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed mt-2">Geospatial index of pharmaceutical deserts in Nebraska and optimization of conventional and autonomous delivery. Outcome: first-author paper accepted at the TRB 2027 Annual Meeting.</p>
       </div>
-      <div class="figure-card p-6" style="border-top: 5px solid #1E6FD1;">
-        <p class="font-mono text-xs uppercase tracking-wide text-[var(--graphite)] mb-1">Jun to Aug 2025 · NSF REU Program, UNL</p>
-        <h3 class="font-display text-xl mb-2">Mawunyo Tchamdja</h3>
-        <p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed">Supervised research on autonomous electric mobility systems for agricultural applications in Nebraska.</p>
+      <div class="figure-card p-6 sm:p-7" style="background-color:#F8F4F1; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-top: 5px solid #E0711F;">
+        <p class="font-mono text-xs uppercase tracking-wide text-[var(--graphite)] mb-1">Jun to Aug 2025 · NSF REU, UNL</p>
+        <h3 class="font-display text-xl">Mawunyo Tchamdja</h3><p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed mt-2">Autonomous electric mobility systems for agricultural applications in Nebraska.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Toolkit -->
-<section class="py-20 sm:py-24 border-b hairline" style="background:#E0711F08;">
-  <div class="max-w-4xl mx-auto px-5 sm:px-8">
-    <p class="inline-block font-mono text-xs tracking-[0.14em] uppercase mb-3 px-3 py-1 rounded-full text-white" style="background:#E0711F;">§04 · Toolkit</p>
-    <h2 class="font-display text-3xl sm:text-4xl mb-8">Software &amp; Programming</h2>
-    <div class="flex flex-wrap gap-2.5">
-      <span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#0E7C86; border-color:#0E7C86; background:#0E7C8612;">Python</span>
-      <span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#0E7C86; border-color:#0E7C86; background:#0E7C8612;">Julia</span>
-      <span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#0E7C86; border-color:#0E7C86; background:#0E7C8612;">R</span>
-      <span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#0E7C86; border-color:#0E7C86; background:#0E7C8612;">SPSS</span>
-      <span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#0E7C86; border-color:#0E7C86; background:#0E7C8612;">SAS</span>
-      <span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#9A3FC2; border-color:#9A3FC2; background:#9A3FC212;">SUMO</span>
-      <span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#9A3FC2; border-color:#9A3FC2; background:#9A3FC212;">VISSIM</span>
-      <span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#9A3FC2; border-color:#9A3FC2; background:#9A3FC212;">VISUM</span>
-      <span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#9A3FC2; border-color:#9A3FC2; background:#9A3FC212;">Synchro</span>
-      <span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#9A3FC2; border-color:#9A3FC2; background:#9A3FC212;">SIDRA</span>
-      <span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#9A3FC2; border-color:#9A3FC2; background:#9A3FC212;">HCS</span>
-      <span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#1E6FD1; border-color:#1E6FD1; background:#1E6FD112;">ArcGIS</span>
-      <span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#1E6FD1; border-color:#1E6FD1; background:#1E6FD112;">QGIS</span>
-      <span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#1E6FD1; border-color:#1E6FD1; background:#1E6FD112;">GeoDa</span>
-      <span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#D4491F; border-color:#D4491F; background:#D4491F12;">LaTeX</span>
-      <span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#D4491F; border-color:#D4491F; background:#D4491F12;">Git</span>
-      <span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#D4491F; border-color:#D4491F; background:#D4491F12;">Quarto</span>
-      <span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#D4491F; border-color:#D4491F; background:#D4491F12;">Markdown</span>
-      <span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#D4491F; border-color:#D4491F; background:#D4491F12;">HTML</span>
-      <span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#D4491F; border-color:#D4491F; background:#D4491F12;">HPC</span>
+<section class="py-20 sm:py-24 border-b hairline" style="background:#1E6FD108;">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <p class="inline-block font-mono text-xs tracking-[0.14em] uppercase mb-3 px-3 py-1 rounded-full text-white" style="background:#1E6FD1;">§04 · Toolkit</p>
+    <h2 class="font-display text-3xl sm:text-4xl mb-12">Software &amp; Programming</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="tile"><div class="tile-label" style="color:#0E7C86;"><span class="dot" style="background:#0E7C86;"></span>Programming</div><div class="flex flex-wrap gap-2 mt-3"><span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#0E7C86; border-color:#0E7C86; background:#0E7C8612;">Python</span><span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#0E7C86; border-color:#0E7C86; background:#0E7C8612;">Julia</span><span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#0E7C86; border-color:#0E7C86; background:#0E7C8612;">R</span><span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#0E7C86; border-color:#0E7C86; background:#0E7C8612;">SAS</span><span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#0E7C86; border-color:#0E7C86; background:#0E7C8612;">SPSS</span></div></div>
+      <div class="tile"><div class="tile-label" style="color:#9A3FC2;"><span class="dot" style="background:#9A3FC2;"></span>Simulation and analysis</div><div class="flex flex-wrap gap-2 mt-3"><span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#9A3FC2; border-color:#9A3FC2; background:#9A3FC212;">SUMO</span><span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#9A3FC2; border-color:#9A3FC2; background:#9A3FC212;">VISSIM</span><span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#9A3FC2; border-color:#9A3FC2; background:#9A3FC212;">VISUM</span><span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#9A3FC2; border-color:#9A3FC2; background:#9A3FC212;">Synchro</span><span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#9A3FC2; border-color:#9A3FC2; background:#9A3FC212;">SIDRA</span><span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#9A3FC2; border-color:#9A3FC2; background:#9A3FC212;">HCS</span></div></div>
+      <div class="tile"><div class="tile-label" style="color:#1E6FD1;"><span class="dot" style="background:#1E6FD1;"></span>GIS</div><div class="flex flex-wrap gap-2 mt-3"><span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#1E6FD1; border-color:#1E6FD1; background:#1E6FD112;">ArcGIS</span><span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#1E6FD1; border-color:#1E6FD1; background:#1E6FD112;">QGIS</span><span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#1E6FD1; border-color:#1E6FD1; background:#1E6FD112;">GeoDa</span></div></div>
+      <div class="tile"><div class="tile-label" style="color:#E0711F;"><span class="dot" style="background:#E0711F;"></span>Research tools</div><div class="flex flex-wrap gap-2 mt-3"><span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#E0711F; border-color:#E0711F; background:#E0711F12;">Git</span><span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#E0711F; border-color:#E0711F; background:#E0711F12;">LaTeX</span><span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#E0711F; border-color:#E0711F; background:#E0711F12;">Quarto</span><span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#E0711F; border-color:#E0711F; background:#E0711F12;">HTML</span><span class="font-mono text-xs px-3 py-1.5 rounded-full border" style="color:#E0711F; border-color:#E0711F; background:#E0711F12;">HPC</span></div></div>
     </div>
   </div>
 </section>
 
 <!-- Service -->
 <section class="py-20 sm:py-24 border-b hairline">
-  <div class="max-w-4xl mx-auto px-5 sm:px-8">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
     <p class="inline-block font-mono text-xs tracking-[0.14em] uppercase mb-3 px-3 py-1 rounded-full text-white" style="background:#0E7C86;">§05 · Service</p>
     <h2 class="font-display text-3xl sm:text-4xl mb-12">Professional Service</h2>
-    <div class="space-y-6">
-      <div class="pb-6 border-b hairline-soft">
-        <p class="font-mono text-xs uppercase tracking-wide mb-1" style="color:#0E7C86;">Conference Organization</p>
-        <h3 class="font-display text-xl">Technical Lead, Bridging Transportation Researchers (BTR) 6, online conference</h3>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="figure-card p-6 sm:p-7" style="background-color:#F1F5F5; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-top: 5px solid #0E7C86;">
+        <p class="font-mono text-xs uppercase tracking-wide text-[var(--graphite)] mb-1">Conference Organization</p>
+        <h3 class="font-display text-xl">Technical Lead, Bridging Transportation Researchers (BTR) 6</h3><p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed mt-2">Online conference.</p>
       </div>
-      <div>
-        <p class="font-mono text-xs uppercase tracking-wide mb-3" style="color:#0E7C86;">Peer Review</p>
-        <ul class="text-[var(--graphite)] leading-relaxed space-y-1">
-          <li><em>Transportation Research Part A: Policy and Practice</em></li>
-          <li><em>Scientific Reports</em></li>
-          <li><em>KSCE Journal of Civil Engineering</em></li>
-          <li><em>Discover Civil Engineering</em></li>
-          <li>Transportation Research Board (TRB) Annual Meeting</li>
-          <li>Bridging Transportation Researchers Conference, Nos. 5 to 8</li>
-        </ul>
+      <div class="figure-card p-6 sm:p-7" style="background-color:#F1F5F5; background-image:radial-gradient(rgba(27,28,30,0.07) 1px, transparent 1.2px); background-size:14px 14px; border-top: 5px solid #0E7C86;">
+        <p class="font-mono text-xs uppercase tracking-wide text-[var(--graphite)] mb-1">Peer Review</p>
+        <h3 class="font-display text-xl">Journals and Conferences</h3><p class="text-[var(--graphite)] text-[0.95rem] leading-relaxed mt-2"><em>Transportation Research Part A</em>, <em>Scientific Reports</em>, <em>KSCE Journal of Civil Engineering</em>, <em>Discover Civil Engineering</em>, TRB Annual Meeting, and BTR Conferences 5 to 8.</p>
       </div>
     </div>
   </div>
