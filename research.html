@@ -172,7 +172,7 @@
 <section class="py-20 sm:py-24 border-b hairline">
   <div class="max-w-6xl mx-auto px-5 sm:px-8">
     <p class="inline-block font-mono text-xs tracking-[0.14em] uppercase mb-3 px-3 py-1 rounded-full text-white" style="background:#0E7C86;">§01 · Current Focus</p>
-    <h2 class="font-display text-3xl sm:text-4xl mb-4">Two Connected Threads</h2>
+    <h2 class="font-display text-3xl sm:text-4xl mb-4">Connected Threads</h2>
     <p class="text-[var(--graphite)] max-w-3xl mb-14">Automated vehicles are expected to balance safety, flow, and smoothness, and to interact well with drivers who all behave differently. My work learns both the balance and the behavior from real data.</p>
 
     <div class="grid md:grid-cols-2 gap-6">
@@ -209,9 +209,17 @@
 
     </div>
 
-    <div class="mt-6 rounded-xl p-6 sm:p-7" style="background:#EEF2F7; border:1px solid #1E6FD133;">
-      <p class="eyebrow mb-2" style="color:#1E6FD1;">Next · Interaction</p>
-      <p class="text-[var(--graphite)] leading-relaxed max-w-4xl">The two threads meet in models of interaction: drivers who remember recent encounters and respond to their neighbors both one by one and as a group, modeled for individual drivers and for whole neighborhoods of vehicles. These models will let an AV choose the balance suited to the drivers actually around it, and make realistic, heterogeneous drivers feasible at network simulation scale.</p>
+    <div class="grid md:grid-cols-2 gap-6 mt-6">
+      <div class="rounded-xl p-6 sm:p-7" style="background:#F7F1EC; border:1px solid #E0711F40;">
+        <p class="eyebrow mb-2" style="color:#E0711F;">Thread 3 · Synthesis</p>
+        <h3 class="font-display text-xl mb-3">Driver-Aware AV Control</h3>
+        <p class="text-[var(--graphite)] leading-relaxed">Joins the two threads. The empirical alignment target is conditioned on the behavioral profiles and short-horizon forecasts of the drivers around the AV, so it seeks the balance suited to the drivers actually present. Evaluated at two scales: individual driving against fixed-target and baseline controllers, and traffic outcomes at 10% to 50% AV penetration, including wave damping, freeway throughput, and intersection delay.</p>
+      </div>
+      <div class="rounded-xl p-6 sm:p-7" style="background:#EEF2F7; border:1px solid #1E6FD133;">
+        <p class="eyebrow mb-2" style="color:#1E6FD1;">Next · Interaction</p>
+        <h3 class="font-display text-xl mb-3">Quantum Modeling of Interacting Agents</h3>
+        <p class="text-[var(--graphite)] leading-relaxed">Drivers remember recent encounters and respond to their neighbors both one by one and as a group. This work models memory and group effects together using tensor networks and process tensors, adding each effect in turn to measure what it contributes to prediction, and compares quantum and ordinary probabilistic forms at comparable parameter budgets. It extends from individual drivers to whole neighborhoods of vehicles.</p>
+      </div>
     </div>
   </div>
 </section>
